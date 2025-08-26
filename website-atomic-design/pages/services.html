@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Eventos Elegantes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+    <button class="btn" onclick="location.href='index.html'">Inicio</button>
+    <button class="btn" onclick="location.href='services.html'">Servicios</button>
+    <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
+    <button class="btn" onclick="location.href='reviews.html'">Reseñas</button>
+    <button class="btn" onclick="location.href='contact.html'">Contacto</button>
+  </nav>
+  <main class="container">
+    <nav style="margin:1em 0 2em 0;font-size:0.95em;color:#888;">
+      <span><a href="index.html">Inicio</a> / Servicios</span>
+    </nav>
+    <section class="section">
+      <h1 class="heading" style="text-align:center;">Nuestros Servicios</h1>
+      <div id="services-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2em;"></div>
+      <div style="background:#f8f4f2;padding:1.5em;margin:2em 0;border-radius:8px;text-align:center;">
+        <span>¿Necesitas un servicio personalizado?</span>
+        <button class="btn" style="margin-left:1em;">Contáctanos</button>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const servicios = [
+        {nombre:'Bodas',desc:'Organización de bodas elegantes.',img:'https://placehold.co/300x200?text=Bodas'},
+        {nombre:'Eventos Corporativos',desc:'Eventos empresariales y corporativos.',img:'https://placehold.co/300x200?text=Corporativo'},
+        {nombre:'Fiesta de Cumpleaños',desc:'Cumpleaños inolvidables.',img:'https://placehold.co/300x200?text=Cumpleaños'},
+        {nombre:'Aniversarios',desc:'Celebraciones de aniversario.',img:'https://placehold.co/300x200?text=Aniversario'},
+        {nombre:'Baby Showers',desc:'Eventos para baby showers.',img:'https://placehold.co/300x200?text=Baby+Shower'},
+        {nombre:'Fiestas Pequeñas',desc:'Fiestas íntimas y familiares.',img:'https://placehold.co/300x200?text=Fiesta+Pequeña'}
+      ];
+      let html = '';
+      servicios.forEach(s => {
+        html += `<div class='card card-image-text'>
+          <img src='${s.img}' alt='${s.nombre}' class='image'>
+          <h3 class='heading'>${s.nombre}</h3>
+          <p>${s.desc}</p>
+        </div>`;
+      });
+      document.getElementById('services-list').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

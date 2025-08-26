@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Eventos Elegantes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+    <button class="btn" onclick="location.href='index.html'">Inicio</button>
+    <button class="btn" onclick="location.href='services.html'">Servicios</button>
+    <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
+    <button class="btn" onclick="location.href='reviews.html'">Reseñas</button>
+    <button class="btn" onclick="location.href='contact.html'">Contacto</button>
+  </nav>
+
+  <main class="container">
+    <style>
+      .contact-main { display: flex; flex-wrap: wrap; gap: 2em; margin-bottom: 2em; }
+      .contact-form, .contact-info { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2em 1.5em; flex: 1 1 340px; min-width: 320px; }
+      .contact-info { background: #f8f4f2; color: #333; font-size: 1em; }
+      .contact-social { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em; margin-top: 1.5em; }
+      .contact-social a { display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 8px; padding: 0.7em 0; color: #b48a78; font-weight: 500; text-decoration: none; border: 1px solid #eee; transition: background 0.2s; }
+      .contact-social a:hover { background: #e7c6b6; color: #fff; }
+      .contact-map { width: 100%; border-radius: 8px; margin: 2em 0; overflow: hidden; min-height: 220px; background: #eee; }
+      .contact-footer-nav { display: flex; flex-wrap: wrap; gap: 2em; justify-content: space-between; margin-top: 2em; font-size: 0.98em; }
+      .contact-footer-nav > div { flex: 1 1 180px; min-width: 180px; }
+      @media (max-width: 900px) { .contact-main, .contact-footer-nav { flex-direction: column; gap: 1em; } }
+    </style>
+    <h1 class="heading" style="text-align:center;">Contáctanos</h1>
+    <p style="text-align:center;max-width:600px;margin:0 auto 2em auto;">Estamos aquí para ayudarte a crear el evento de tus sueños. Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+    <div class="contact-main">
+      <form class="contact-form">
+        <h2 class="heading" style="font-size:1.2em;">Formulario de Contacto</h2>
+        <label>Nombre Completo<br><input type="text" class="input" placeholder="Tu nombre completo" required></label><br>
+        <label>Correo Electrónico<br><input type="email" class="input" placeholder="tucorreo@ejemplo.com" required></label><br>
+        <label>Teléfono<br><input type="text" class="input" placeholder="+52 55 1234 5678"></label><br>
+        <label>Mensaje<br><textarea class="input" placeholder="Cuéntanos sobre tu evento y cómo podemos ayudarte..." rows="4" required></textarea></label><br>
+        <label style="font-size:0.95em;"><input type="checkbox" required> Acepto la política de privacidad y el tratamiento de mis datos personales</label><br>
+        <button class="btn" type="submit" style="width:100%;margin-top:1em;">Enviar Mensaje</button>
+      </form>
+      <div class="contact-info">
+        <h2 class="heading" style="font-size:1.2em;">Información de Contacto</h2>
+        <p><b>Dirección</b><br>Av. Principal 123, Colonia Centro<br>Ciudad de México,<br>CP 06000</p>
+        <p><b>Teléfono</b><br>+52 55 1234 5678<br>+52 55 8765 4321</p>
+        <p><b>Correo Electrónico</b><br>info@eventoselegantes.com<br>reservas@eventoselegantes.com</p>
+        <p><b>Horario de Atención</b><br>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+        <div class="contact-social">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <h2 class="heading" style="margin-top:2em;">Nuestra Ubicación</h2>
+    <div class="contact-map">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-99.145%2C19.432%2C-99.135%2C19.437&amp;layer=mapnik" style="width:100%;height:220px;border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <h2 class="heading" style="margin-top:2em;">Explora Nuestro Sitio</h2>
+    <nav style="text-align:center;margin-bottom:2em;">
+      <a href="index.html">Inicio</a> |
+      <a href="services.html">Servicios</a> |
+      <a href="catalog.html">Catálogo</a> |
+      <a href="#">Reseñas</a>
+    </nav>
+    <div class="contact-footer-nav">
+      <div>
+        <b>Agencia de Eventos</b>
+        <p style="font-size:0.95em;">Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
+        <div style="font-size:1.2em;">
+          <span>🌐</span> <span>📷</span> <span>📌</span> <span>💬</span>
+        </div>
+      </div>
+      <div>
+        <b>Navegación</b>
+        <ul style="list-style:none;padding:0;">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="#">Reseñas</a></li>
+          <li><a href="contact.html">Contactos</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Nuestros Servicios</b>
+        <ul style="list-style:none;padding:0;">
+          <li>Bodas</li>
+          <li>Eventos Corporativos</li>
+          <li>Fiestas de Cumpleaños</li>
+          <li>Aniversarios</li>
+          <li>Eventos Especiales</li>
+        </ul>
+      </div>
+      <div>
+        <b>Contáctanos</b>
+        <p>Av. Principal 123, Ciudad de México<br>+52 55 1234 5678<br>info@agenciaeventos.com<br>Lun - Vie: 9:00 - 18:00</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

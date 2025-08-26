@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas | Eventos Elegantes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .reviews-section { margin: 2em 0; }
+    .reviews-featured { display: flex; gap: 2em; flex-wrap: wrap; justify-content: center; margin-bottom: 2em; }
+    .review-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5em 1em; min-width: 260px; max-width: 340px; flex: 1 1 260px; }
+    .review-card .review-user { display: flex; align-items: center; gap: 1em; margin-bottom: 1em; }
+    .review-card .review-user img { border-radius: 50%; width: 48px; height: 48px; }
+    .review-card .review-stars { color: #e7c6b6; font-size: 1.1em; margin-bottom: 0.5em; }
+    .reviews-experiences { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 2em; margin-bottom: 2em; }
+    .experience-card { background: #f8f4f2; border-radius: 8px; padding: 1em 1em 1em 0; display: flex; gap: 1em; align-items: flex-start; }
+    .experience-card img { border-radius: 8px; width: 100px; height: 80px; object-fit: cover; }
+    .reviews-quotes { background: #f8f4f2; border-radius: 8px; padding: 2em 1em; margin: 2em 0; display: flex; gap: 2em; justify-content: center; flex-wrap: wrap; }
+    .reviews-quotes blockquote { font-size: 1.1em; color: #b48a78; font-style: italic; margin: 0; max-width: 260px; }
+    .reviews-quotes cite { display: block; margin-top: 0.5em; color: #888; font-size: 0.95em; }
+    .reviews-cta { background: #f8f4f2; border-radius: 8px; padding: 2em 1em; text-align: center; margin: 2em 0; }
+    .reviews-cta img { width: 60px; margin-bottom: 1em; }
+    @media (max-width: 900px) {
+      .reviews-featured, .reviews-quotes { flex-direction: column; align-items: center; }
+      .reviews-experiences { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+    <button class="btn" onclick="location.href='index.html'">Inicio</button>
+    <button class="btn" onclick="location.href='services.html'">Servicios</button>
+    <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
+    <button class="btn" onclick="location.href='reviews.html'">Reseñas</button>
+    <button class="btn" onclick="location.href='contact.html'">Contacto</button>
+  </nav>
+  <main class="container">
+    <h1 class="heading" style="text-align:center;">Nuestros Clientes Hablan</h1>
+    <section class="reviews-section">
+      <h2 class="heading" style="font-size:1.2em;">Testimonios Destacados</h2>
+      <div class="reviews-featured">
+        <div class="review-card">
+          <div class="review-user"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sofia Martinez"><b>Sofia Martinez</b></div>
+          <div class="review-stars">★★★★★</div>
+          <p>"¡Mi boda fue perfecta! El equipo de Eventos Elegantes superó todas mis expectativas."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-user"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Rodriguez"><b>Carlos Rodriguez</b></div>
+          <div class="review-stars">★★★★★</div>
+          <p>"Excelente organización y atención al detalle en nuestro evento corporativo. ¡Repetiremos!"</p>
+        </div>
+        <div class="review-card">
+          <div class="review-user"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ana López"><b>Ana López</b></div>
+          <div class="review-stars">★★★★★</div>
+          <p>"La decoración y el ambiente fueron mágicos. ¡Gracias por hacer nuestro aniversario inolvidable!"</p>
+        </div>
+      </div>
+    </section>
+    <section class="reviews-section">
+      <h2 class="heading" style="font-size:1.2em;">Experiencias de Nuestros Clientes</h2>
+      <div class="reviews-experiences">
+        <div class="experience-card">
+          <img src="https://placehold.co/100x80?text=Boda" alt="Boda de Ensueño">
+          <div>
+            <b>Boda de Ensueño</b>
+            <div class="review-stars">★★★★★</div>
+            <p>"La mejor experiencia de nuestras vidas. Todo fue perfecto y sin preocupaciones."</p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <img src="https://placehold.co/100x80?text=Corporativo" alt="Evento Corporativo Exitoso">
+          <div>
+            <b>Evento Corporativo Exitoso</b>
+            <div class="review-stars">★★★★★</div>
+            <p>"Nuestros clientes quedaron impresionados. ¡Gracias por su profesionalismo!"</p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <img src="https://placehold.co/100x80?text=Aniversario" alt="Aniversario Maravilloso">
+          <div>
+            <b>Aniversario Maravilloso</b>
+            <div class="review-stars">★★★★★</div>
+            <p>"Un evento íntimo y hermoso. ¡Recomendado al 100%!"</p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <img src="https://placehold.co/100x80?text=Infantil" alt="Fiesta Infantil Inolvidable">
+          <div>
+            <b>Fiesta Infantil Inolvidable</b>
+            <div class="review-stars">★★★★★</div>
+            <p>"Los niños y los papás felices. Todo seguro y divertido."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews-section">
+      <h2 class="heading" style="font-size:1.2em;text-align:center;">Lo Que Dicen Nuestros Clientes</h2>
+      <div class="reviews-quotes">
+        <blockquote>"El mejor servicio de eventos que hemos contratado."<cite>- Laura Jiménez</cite></blockquote>
+        <blockquote>"Todo salió perfecto, ¡gracias por su dedicación!"<cite>- Pedro Salas</cite></blockquote>
+        <blockquote>"Repetiría sin dudarlo, atención personalizada y profesional."<cite>- Karla Sánchez</cite></blockquote>
+        <blockquote>"Superaron nuestras expectativas en todo momento."<cite>- Jorge Ramírez</cite></blockquote>
+      </div>
+    </section>
+    <section class="reviews-cta">
+      <img src="https://placehold.co/60x60?text=" alt="Cupcake">
+      <h2 class="heading" style="font-size:1.2em;">¿Listo para crear tu evento perfecto?</h2>
+      <p>Contáctanos y haremos realidad tu celebración soñada.</p>
+      <a href="contact.html" class="btn" style="margin-top:1em;">Solicitar Cotización</a>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

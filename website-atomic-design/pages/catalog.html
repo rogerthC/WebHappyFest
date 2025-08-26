@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | Eventos Elegantes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+    <button class="btn" onclick="location.href='index.html'">Inicio</button>
+    <button class="btn" onclick="location.href='services.html'">Servicios</button>
+    <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
+    <button class="btn" onclick="location.href='reviews.html'">Reseñas</button>
+    <button class="btn" onclick="location.href='contact.html'">Contacto</button>
+  </nav>
+  <main class="container">
+    <nav style="margin:1em 0 2em 0;font-size:0.95em;color:#888;">
+      <span><a href="index.html">Inicio</a> / Catálogo</span>
+    </nav>
+    <section class="section">
+      <h1 class="heading" style="text-align:center;">Nuestro Catálogo de Eventos</h1>
+      <div id="catalog-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2em;"></div>
+      <div style="background:#f8f4f2;padding:1.5em;margin:2em 0;border-radius:8px;text-align:center;">
+        <span>¿Listo para tu evento soñado?</span>
+        <button class="btn" style="margin-left:1em;">Solicitar Cotización</button>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const catalogo = [
+        {nombre:'Boda Jardín Romántico',desc:'Boda al aire libre con decoración floral.',img:'https://placehold.co/300x200?text=Jardín'},
+        {nombre:'Lanzamiento Empresa',desc:'Evento corporativo de alto nivel.',img:'https://placehold.co/300x200?text=Empresa'},
+        {nombre:'Cumpleaños Lujo',desc:'Fiesta de cumpleaños exclusiva.',img:'https://placehold.co/300x200?text=Cumpleaños'},
+        {nombre:'Gala de Beneficencia',desc:'Evento de gala para recaudación.',img:'https://placehold.co/300x200?text=Gala'},
+        {nombre:'Cena de Aniversario',desc:'Cena íntima para aniversarios.',img:'https://placehold.co/300x200?text=Aniversario'},
+        {nombre:'Fiesta Infantil',desc:'Fiesta temática para niños.',img:'https://placehold.co/300x200?text=Infantil'}
+      ];
+      let html = '';
+      catalogo.forEach(c => {
+        html += `<div class='product-card card'>
+          <img src='${c.img}' alt='${c.nombre}' class='image'>
+          <h3 class='heading'>${c.nombre}</h3>
+          <p>${c.desc}</p>
+          <button class='btn'>Ver más</button>
+        </div>`;
+      });
+      document.getElementById('catalog-list').innerHTML = html;
+    });
+  </script>
+</body>
+</html>
