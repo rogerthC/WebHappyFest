@@ -1,0 +1,11 @@
+/* Variables CSS personalizadas */
+:root {
+  --primary-color: #e7c6b6;
+  --secondary-color: #f8f4f2;
+  --accent-color: #b48a78;
+  --text-color: #333;
+  --background-color: #fff;
+  --font-family: 'Segoe UI', Arial, sans-serif;
+  --border-radius: 8px;
+  --transition: 0.3s;
+}

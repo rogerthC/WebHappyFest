@@ -1,0 +1,119 @@
+@import url('./_variables.css');
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+.heading, h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin: 0 0 0.7em 0;
+  font-weight: bold;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75em 2em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background var(--transition);
+}
+
+.btn:hover {
+  background: var(--accent-color);
+}
+
+input[type="text"], input[type="email"], textarea {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+header, footer {
+  background: var(--secondary-color);
+  padding: 1.5em 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 3em 0 2em 0;
+  padding: 2em 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5em 1em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Secciones de la landing */
+#services-cards, #catalog-cards, #reviews-cards {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 900px) {
+  #services-cards, #catalog-cards, #reviews-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Hero section */
+main > .section:first-child {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em 0 2em 0;
+}
+
+main > .section:first-child .btn {
+  margin: 0 0.5em;
+  min-width: 160px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5em;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.95em;
+  color: #888;
+}
