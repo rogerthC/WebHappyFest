@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <div style="position:absolute;top:20px;left:40px;z-index:10;">
+    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
+  </div>
   <div id="header-placeholder"></div>
   <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
     <button class="btn" onclick="location.href='index.html'">Inicio</button>
@@ -17,7 +20,7 @@
   </nav>
   <main class="container">
     <nav style="margin:1em 0 2em 0;font-size:0.95em;color:#888;">
-      <span><a href="index.html">Inicio</a> / Catálogo</span>
+      <span><a href="index.html"></a></span>
     </nav>
     <section class="section">
       <h1 class="heading" style="text-align:center;">Nuestro Catálogo de Eventos</h1>
@@ -33,12 +36,12 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const catalogo = [
-        {nombre:'Boda Jardín Romántico',desc:'Boda al aire libre con decoración floral.',img:'https://placehold.co/300x200?text=Jardín'},
-        {nombre:'Lanzamiento Empresa',desc:'Evento corporativo de alto nivel.',img:'https://placehold.co/300x200?text=Empresa'},
-        {nombre:'Cumpleaños Lujo',desc:'Fiesta de cumpleaños exclusiva.',img:'https://placehold.co/300x200?text=Cumpleaños'},
-        {nombre:'Gala de Beneficencia',desc:'Evento de gala para recaudación.',img:'https://placehold.co/300x200?text=Gala'},
-        {nombre:'Cena de Aniversario',desc:'Cena íntima para aniversarios.',img:'https://placehold.co/300x200?text=Aniversario'},
-        {nombre:'Fiesta Infantil',desc:'Fiesta temática para niños.',img:'https://placehold.co/300x200?text=Infantil'}
+        {nombre:'Boda Jardín Romántico',desc:'Boda al aire libre con decoración floral.',img:'../Imagenes/Boda2.jpeg'},
+        {nombre:'Lanzamiento Empresa',desc:'Evento corporativo de alto nivel.',img:'../Imagenes/corporativo2.png'},
+        {nombre:'Cumpleaños Lujo',desc:'Fiesta de cumpleaños exclusiva.',img:'../Imagenes/cumpleaños2.jpeg'},
+        {nombre:'Gala de Beneficencia',desc:'Evento de gala para recaudación.',img:'../Imagenes/gala1.png'},
+        {nombre:'Cena de Aniversario',desc:'Cena íntima para aniversarios.',img:'../Imagenes/Aniversario2.png'},
+        {nombre:'Fiesta Infantil',desc:'Fiesta temática para niños.',img:'../Imagenes/fiestainfantil2.png'}
       ];
       let html = '';
       catalogo.forEach(c => {

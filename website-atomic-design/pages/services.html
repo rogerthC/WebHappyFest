@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <div style="position:absolute;top:20px;left:40px;z-index:10;">
+    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
+  </div>
   <div id="header-placeholder"></div>
   <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
     <button class="btn" onclick="location.href='index.html'">Inicio</button>
@@ -17,7 +20,7 @@
   </nav>
   <main class="container">
     <nav style="margin:1em 0 2em 0;font-size:0.95em;color:#888;">
-      <span><a href="index.html">Inicio</a> / Servicios</span>
+      <span><a href="index.html"></a></span>
     </nav>
     <section class="section">
       <h1 class="heading" style="text-align:center;">Nuestros Servicios</h1>
@@ -33,12 +36,12 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const servicios = [
-        {nombre:'Bodas',desc:'Organización de bodas elegantes.',img:'https://placehold.co/300x200?text=Bodas'},
-        {nombre:'Eventos Corporativos',desc:'Eventos empresariales y corporativos.',img:'https://placehold.co/300x200?text=Corporativo'},
-        {nombre:'Fiesta de Cumpleaños',desc:'Cumpleaños inolvidables.',img:'https://placehold.co/300x200?text=Cumpleaños'},
-        {nombre:'Aniversarios',desc:'Celebraciones de aniversario.',img:'https://placehold.co/300x200?text=Aniversario'},
-        {nombre:'Baby Showers',desc:'Eventos para baby showers.',img:'https://placehold.co/300x200?text=Baby+Shower'},
-        {nombre:'Fiestas Pequeñas',desc:'Fiestas íntimas y familiares.',img:'https://placehold.co/300x200?text=Fiesta+Pequeña'}
+        {nombre:'Bodas',desc:'Organización de bodas elegantes.',img:'../Imagenes/Boda1.jpeg'},
+        {nombre:'Eventos Corporativos',desc:'Eventos empresariales y corporativos.',img:'../Imagenes/coorporativo.png'},
+        {nombre:'Fiesta de Cumpleaños',desc:'Cumpleaños inolvidables.',img:'../Imagenes/cumpleaños1.jpeg'},
+        {nombre:'Aniversarios',desc:'Celebraciones de aniversario.',img:'../Imagenes/Aniversario1.jpeg'},
+        {nombre:'Baby Showers',desc:'Eventos para baby showers.',img:'../Imagenes/Bautizo1.jpeg'},
+        {nombre:'Fiestas Pequeñas',desc:'Fiestas íntimas y familiares.',img:'../Imagenes/fiestapequeña.jpeg'}
       ];
       let html = '';
       servicios.forEach(s => {
