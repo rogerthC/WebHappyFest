@@ -66,6 +66,7 @@ header, footer {
   flex-direction: column;
   align-items: center;
 }
+
 /* Secciones de la landing */
 #services-cards, #catalog-cards, #reviews-cards {
   display: flex;
@@ -117,3 +118,15 @@ footer {
   font-size: 0.95em;
   color: #888;
 }
+
+.card-image-text .image,
+.product-card .image {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  display: block;
+  margin-bottom: 1em;
+}
+
