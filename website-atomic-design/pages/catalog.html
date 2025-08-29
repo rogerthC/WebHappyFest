@@ -5,6 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo | Eventos Elegantes</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .sparkle {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 1100;
+      animation: sparkle 1s ease-out forwards;
+      box-shadow: 0 0 18px 6px #fff, 0 0 32px 12px #ffd700;
+    }
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(0.5) rotate(0deg);}
+      30% { opacity: 1; transform: scale(1.4) rotate(30deg);}
+      70% { opacity: 1; transform: scale(1) rotate(330deg);}
+      100% { opacity: 0; transform: scale(0.7) rotate(360deg);}
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 18px;
+      border-radius: 3px;
+      opacity: 0.9;
+      z-index: 1200;
+      will-change: transform, opacity;
+      animation: confetti-explode 2.2s cubic-bezier(.17,.67,.83,.67) forwards;
+    }
+    @keyframes confetti-explode {
+      0% {
+        opacity: 0.9;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      10% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.7;
+        /* El desplazamiento final se define en JS con variables */
+      }
+    }
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 1em;
+      background: #fff;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: 4px solid transparent;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 0;
+      z-index: 1;
+      pointer-events: none;
+      border: 4px solid transparent;
+      background: linear-gradient(270deg,
+        #ffd6e0, #d6faff, #e0ffd6, #fff6d6, #e0d6ff, #ffd6e0
+      );
+      background-size: 1200% 1200%;
+      animation: neon-move 6s linear infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    @keyframes neon-move {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+  </style>
 </head>
 <body>
   <div style="position:absolute;top:20px;left:40px;z-index:10;">
@@ -25,6 +106,13 @@
     <section class="section">
       <h1 class="heading" style="text-align:center;">Nuestro Catálogo de Eventos</h1>
       <div id="catalog-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2em;"></div>
+      <!-- Modal para mostrar información -->
+      <div id="modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;">
+        <div id="modal-content" style="background:#fff;padding:2em;border-radius:12px;max-width:400px;width:90%;position:relative;display:flex;flex-direction:column;align-items:center;">
+          <button id="close-modal" style="position:absolute;top:10px;right:10px;font-size:1.2em;background:none;border:none;cursor:pointer;">&times;</button>
+          <div id="modal-body" style="width:100%;display:flex;flex-direction:column;align-items:center;"></div>
+        </div>
+      </div>
       <div style="background:#f8f4f2;padding:1.5em;margin:2em 0;border-radius:8px;text-align:center;">
         <span>¿Listo para tu evento soñado?</span>
         <button class="btn" style="margin-left:1em;">Solicitar Cotización</button>
@@ -44,15 +132,80 @@
         {nombre:'Fiesta Infantil',desc:'Fiesta temática para niños.',img:'../Imagenes/fiestainfantil2.png'}
       ];
       let html = '';
-      catalogo.forEach(c => {
+      catalogo.forEach((c, idx) => {
         html += `<div class='product-card card'>
           <img src='${c.img}' alt='${c.nombre}' class='image'>
           <h3 class='heading'>${c.nombre}</h3>
           <p>${c.desc}</p>
-          <button class='btn'>Ver más</button>
+          <button class='btn' onclick='showModal(${idx})'>Ver más</button>
         </div>`;
       });
       document.getElementById('catalog-list').innerHTML = html;
+
+      window.showModal = function(idx) {
+        const c = catalogo[idx];
+        document.getElementById('modal-body').innerHTML = `
+          <img src='${c.img}' alt='${c.nombre}' style='width:60%;max-width:220px;max-height:180px;object-fit:cover;border-radius:8px;margin-bottom:1em;box-shadow:0 2px 8px #eee;'>
+          <h2 style='margin:0 0 0.5em 0;text-align:center;'>${c.nombre}</h2>
+          <p style='text-align:center;'>${c.desc}</p>
+          <div style='margin-top:1em;color:#888;font-size:0.95em;text-align:center;'>Solicita más información sobre este servicio en nuestra sección de contacto.</div>
+        `;
+        document.getElementById('modal').style.display = 'flex';
+
+        // Confeti desde el centro inferior del modal
+        const confettiColors = [
+          '#ffd700', '#ff69b4', '#00eaff', '#7fff00', '#ff4500', '#9400d3', '#00ffea', '#ffb300', '#ff6347', '#40e0d0'
+        ];
+        const modalContent = document.getElementById('modal-content');
+        const modalWidth = modalContent.offsetWidth || 400;
+        const modalHeight = modalContent.offsetHeight || 400;
+        const originX = modalWidth / 2 - 5; // centro horizontal
+        const originY = modalHeight - 10;   // parte inferior
+
+        for (let i = 0; i < 70; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.background = confettiColors[i % confettiColors.length];
+          confetti.style.left = originX + 'px';
+          confetti.style.top = originY + 'px';
+
+          // Ángulo entre 70° y 110° para que suba hacia arriba
+          const angle = (Math.random() * (110 - 70) + 70) * Math.PI / 180; // en radianes
+          const distance = 120 + Math.random() * 120;
+          const x = Math.cos(angle) * distance;
+          const y = -Math.sin(angle) * distance;
+
+          confetti.style.animation = `confetti-explode 2.2s cubic-bezier(.17,.67,.83,.67) forwards`;
+          confetti.style.setProperty('--x', `${x}px`);
+          confetti.style.setProperty('--y', `${y}px`);
+          confetti.style.animationDelay = (Math.random() * 0.3) + 's';
+
+          confetti.animate([
+            { opacity: 0.9, transform: 'translate(0,0) scale(1) rotate(0deg)' },
+            { opacity: 1, offset: 0.1 },
+            { opacity: 1, offset: 0.8 },
+            { opacity: 0.7, transform: `translate(${x}px, ${y}px) scale(0.8) rotate(${Math.random()*360}deg)` }
+          ], {
+            duration: 2200,
+            easing: 'cubic-bezier(.17,.67,.83,.67)',
+            fill: 'forwards',
+            delay: Math.random() * 300
+          });
+
+          modalContent.appendChild(confetti);
+          setTimeout(() => {
+            confetti.remove();
+          }, 2500);
+        }
+      };
+
+      document.getElementById('close-modal').onclick = function() {
+        document.getElementById('modal').style.display = 'none';
+      };
+
+      document.getElementById('modal').onclick = function(e) {
+        if (e.target === this) this.style.display = 'none';
+      };
     });
   </script>
 </body>

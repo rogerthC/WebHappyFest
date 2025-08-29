@@ -5,6 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios | Eventos Elegantes</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      margin-bottom: 1em;
+    }
+    .carousel-btn {
+      background: #eee;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .carousel-img {
+      width: 100%;
+      max-width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 1em;
+      background: #fff;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: 4px solid transparent;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 0;
+      z-index: 1;
+      pointer-events: none;
+      border: 4px solid transparent;
+      background: linear-gradient(270deg,
+        #ffd6e0, #d6faff, #e0ffd6, #fff6d6, #e0d6ff, #ffd6e0
+      );
+      background-size: 1200% 1200%;
+      animation: neon-move 6s linear infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    @keyframes neon-move {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+  </style>
 </head>
 <body>
   <div style="position:absolute;top:20px;left:40px;z-index:10;">
@@ -36,22 +97,92 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const servicios = [
-        {nombre:'Bodas',desc:'Organización de bodas elegantes.',img:'../Imagenes/Boda1.jpeg'},
-        {nombre:'Eventos Corporativos',desc:'Eventos empresariales y corporativos.',img:'../Imagenes/coorporativo.png'},
-        {nombre:'Fiesta de Cumpleaños',desc:'Cumpleaños inolvidables.',img:'../Imagenes/cumpleaños1.jpeg'},
-        {nombre:'Aniversarios',desc:'Celebraciones de aniversario.',img:'../Imagenes/Aniversario1.jpeg'},
-        {nombre:'Baby Showers',desc:'Eventos para baby showers.',img:'../Imagenes/Bautizo1.jpeg'},
-        {nombre:'Fiestas Pequeñas',desc:'Fiestas íntimas y familiares.',img:'../Imagenes/fiestapequeña.jpeg'}
+        {
+          nombre: 'Bodas',
+          desc: 'Organización de bodas elegantes.',
+          imgs: [
+            '../Imagenes/Boda1.jpeg',
+            '../Imagenes/Boda2.jpeg',
+            '../Imagenes/Boda3.jpeg',
+            '../Imagenes/Boda4.jpeg'
+          ]
+        },
+        {
+          nombre: 'Eventos Corporativos',
+          desc: 'Eventos empresariales y corporativos.',
+          imgs: [
+            '../Imagenes/coorporativo.png',
+            '../Imagenes/coorporativo2.png',
+            '../Imagenes/coorporativo3.png',
+            '../Imagenes/coorporativo4.png'
+          ]
+        },
+        {
+          nombre: 'Fiesta de Cumpleaños',
+          desc: 'Cumpleaños inolvidables.',
+          imgs: [
+            '../Imagenes/cumpleaños1.jpeg',
+            '../Imagenes/cumpleaños2.jpeg',
+            '../Imagenes/cumpleaños3.jpeg',
+            '../Imagenes/cumpleaños4.png'
+          ]
+        },
+        {
+          nombre: 'Aniversarios',
+          desc: 'Celebraciones de aniversario.',
+          imgs: [
+            '../Imagenes/Aniversario1.jpeg',
+            '../Imagenes/Aniversario3.png',
+            '../Imagenes/Aniversario4.png',
+            '../Imagenes/Aniversario5.png'
+          ]
+        },
+        {
+          nombre: 'Baby Showers',
+          desc: 'Eventos para baby showers.',
+          imgs: [
+            '../Imagenes/Bautizo1.jpeg',
+            '../Imagenes/Bautizo2.jpeg',
+            '../Imagenes/Bautizo3.png',
+            '../Imagenes/Bautizo4.png'
+          ]
+        },
+        {
+          nombre: 'Fiestas Pequeñas',
+          desc: 'Fiestas íntimas y familiares.',
+          imgs: [
+            '../Imagenes/fiestapequeña.jpeg',
+            '../Imagenes/fiestapequeña2.png',
+            '../Imagenes/fiestapequeña3.png',
+            '../Imagenes/fiestapequeña4.png'
+          ]
+        }
       ];
       let html = '';
-      servicios.forEach(s => {
+      servicios.forEach((s, idx) => {
         html += `<div class='card card-image-text'>
-          <img src='${s.img}' alt='${s.nombre}' class='image'>
+          <div class="carousel" data-index="${idx}">
+            <img src='${s.imgs[0]}' alt='${s.nombre}' class='image carousel-img' id='carousel-img-${idx}'>
+          </div>
           <h3 class='heading'>${s.nombre}</h3>
           <p>${s.desc}</p>
         </div>`;
       });
       document.getElementById('services-list').innerHTML = html;
+
+      // Estado de cada carrusel
+      window.carouselIndices = Array(servicios.length).fill(0);
+
+      function autoMoveCarousel(idx) {
+        const imgs = servicios[idx].imgs;
+        window.carouselIndices[idx] = (window.carouselIndices[idx] + 1) % imgs.length;
+        document.getElementById('carousel-img-' + idx).src = imgs[window.carouselIndices[idx]];
+      }
+
+      // Iniciar intervalos automáticos para cada carrusel
+      servicios.forEach((_, idx) => {
+        setInterval(() => autoMoveCarousel(idx), 3000); // 3 segundos
+      });
     });
   </script>
 </body>
