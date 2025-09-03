@@ -4,95 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo | Eventos Elegantes</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <style>
-    .sparkle {
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      pointer-events: none;
-      border-radius: 50%;
-      opacity: 0;
-      z-index: 1100;
-      animation: sparkle 1s ease-out forwards;
-      box-shadow: 0 0 18px 6px #fff, 0 0 32px 12px #ffd700;
-    }
-    @keyframes sparkle {
-      0% { opacity: 0; transform: scale(0.5) rotate(0deg);}
-      30% { opacity: 1; transform: scale(1.4) rotate(30deg);}
-      70% { opacity: 1; transform: scale(1) rotate(330deg);}
-      100% { opacity: 0; transform: scale(0.7) rotate(360deg);}
-    }
-    .confetti {
-      position: absolute;
-      width: 10px;
-      height: 18px;
-      border-radius: 3px;
-      opacity: 0.9;
-      z-index: 1200;
-      will-change: transform, opacity;
-      animation: confetti-explode 2.2s cubic-bezier(.17,.67,.83,.67) forwards;
-    }
-    @keyframes confetti-explode {
-      0% {
-        opacity: 0.9;
-        transform: translate(0, 0) scale(1) rotate(0deg);
-      }
-      10% {
-        opacity: 1;
-      }
-      80% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0.7;
-        /* El desplazamiento final se define en JS con variables */
-      }
-    }
-    .card {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      padding: 1em;
-      background: #fff;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-      border: 4px solid transparent;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      padding: 0;
-      z-index: 1;
-      pointer-events: none;
-      border: 4px solid transparent;
-      background: linear-gradient(270deg,
-        #ffd6e0, #d6faff, #e0ffd6, #fff6d6, #e0d6ff, #ffd6e0
-      );
-      background-size: 1200% 1200%;
-      animation: neon-move 6s linear infinite;
-      -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-    }
-
-    @keyframes neon-move {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
-    }
+  <link rel="stylesheet" href="../css/catalog.css">
   </style>
 </head>
-<body>
+</main>
   <div style="position:absolute;top:20px;left:40px;z-index:10;">
-    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
   </div>
   <div id="header-placeholder"></div>
-  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;position:sticky;top:0;z-index:100;background:#e7c6b6;padding:0.5em 0;">
+    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
     <button class="btn" onclick="location.href='index.html'">Inicio</button>
     <button class="btn" onclick="location.href='services.html'">Servicios</button>
     <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
@@ -114,8 +34,7 @@
         </div>
       </div>
       <div style="background:#f8f4f2;padding:1.5em;margin:2em 0;border-radius:8px;text-align:center;">
-        <span>¿Listo para tu evento soñado?</span>
-        <button class="btn" style="margin-left:1em;">Solicitar Cotización</button>
+        <span>Somos tu mejor opción en precio y calidad</span>
       </div>
     </section>
   </main>
@@ -124,12 +43,12 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const catalogo = [
-        {nombre:'Boda Jardín Romántico',desc:'Boda al aire libre con decoración floral.',img:'../Imagenes/Boda2.jpeg'},
-        {nombre:'Lanzamiento Empresa',desc:'Evento corporativo de alto nivel.',img:'../Imagenes/corporativo2.png'},
-        {nombre:'Cumpleaños Lujo',desc:'Fiesta de cumpleaños exclusiva.',img:'../Imagenes/cumpleaños2.jpeg'},
-        {nombre:'Gala de Beneficencia',desc:'Evento de gala para recaudación.',img:'../Imagenes/gala1.png'},
-        {nombre:'Cena de Aniversario',desc:'Cena íntima para aniversarios.',img:'../Imagenes/Aniversario2.png'},
-        {nombre:'Fiesta Infantil',desc:'Fiesta temática para niños.',img:'../Imagenes/fiestainfantil2.png'}
+        {nombre:'Bodas y aniversarios',desc:'Boda al aire libre con decoración floral.',img:'../Imagenes/Boda2.jpeg'},
+        {nombre:'Reuniones privadas y cenas familiares',desc:'Evento corporativo de alto nivel.',img:'../Imagenes/corporativo2.png'},
+        {nombre:'Cumpleaños infantiles y juveniles',desc:'Fiesta de cumpleaños exclusiva.',img:'../Imagenes/cumpleaños2.jpeg'},
+        {nombre:'Graduaciones y fiestas de promoción',desc:'Evento de gala para recaudación.',img:'../Imagenes/gala1.png'},
+        {nombre:'Eventos empresariales y corporativos',desc:'Cena íntima para aniversarios.',img:'../Imagenes/Aniversario2.png'},
+        {nombre:'Bautizos y primeras comuniones',desc:'Fiesta temática para niños.',img:'../Imagenes/fiestainfantil2.png'}
       ];
       let html = '';
       catalogo.forEach((c, idx) => {
@@ -208,5 +127,34 @@
       };
     });
   </script>
+<!-- Footer -->
+ <footer>
+        <b>Agencia de Eventos</b>
+        <p style="font-size:0.95em;">Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
+        <div style="font-size:1.2em;">
+        </div>
+      </div>
+      <div>
+        <b>Navegación</b>
+        <ul style="list-style:none;padding:0;">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="reviews.html">Reseñas</a></li>
+          <li><a href="contact.html">Contactos</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Contáctanos</b>
+        <p>Av. Ladislao Cabrera, Ciudad de Cochabamba<br>+591 79749800<br>cipecplataforma368@gmail.com<br>Lun - Vie: 9:00 - 21:00</p>
+      </div>
+    <div class="container">
+      <p>&copy; 2025 Happy Fest. Todos los derechos reservados.</p>
+      <form class="search-bar" style="max-width:300px;margin:auto;">
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
+

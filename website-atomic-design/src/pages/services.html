@@ -65,14 +65,14 @@
       50% {background-position:100% 50%;}
       100% {background-position:0% 50%;}
     }
-  </style>
+    </style>
 </head>
-<body>
+</main>
   <div style="position:absolute;top:20px;left:40px;z-index:10;">
-    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
   </div>
   <div id="header-placeholder"></div>
-  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;">
+  <nav style="display:flex;gap:1em;justify-content:center;align-items:center;margin:1.5em 0 1em 0;position:sticky;top:0;z-index:100;background:#e7c6b6;padding:0.5em 0;">
+    <img src="../Imagenes/logo.png" alt="Logo Empresa" style="height:90px; border-radius:18px;">
     <button class="btn" onclick="location.href='index.html'">Inicio</button>
     <button class="btn" onclick="location.href='services.html'">Servicios</button>
     <button class="btn" onclick="location.href='catalog.html'">Catálogo</button>
@@ -87,8 +87,7 @@
       <h1 class="heading" style="text-align:center;">Nuestros Servicios</h1>
       <div id="services-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2em;"></div>
       <div style="background:#f8f4f2;padding:1.5em;margin:2em 0;border-radius:8px;text-align:center;">
-        <span>¿Necesitas un servicio personalizado?</span>
-        <button class="btn" style="margin-left:1em;">Contáctanos</button>
+        <span>Somos tu mejor opción</span>
       </div>
     </section>
   </main>
@@ -99,7 +98,7 @@
       const servicios = [
         {
           nombre: 'Bodas',
-          desc: 'Organización de bodas elegantes.',
+          desc: 'Decoración con globos (arcos, columnas, centros de mesa) desde Bs. 250',
           imgs: [
             '../Imagenes/Boda1.jpeg',
             '../Imagenes/Boda2.jpeg',
@@ -185,5 +184,34 @@
       });
     });
   </script>
+<!-- Footer -->
+    <footer>
+        <b>Agencia de Eventos</b>
+        <p style="font-size:0.95em;">Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
+        <div style="font-size:1.2em;">
+        </div>
+      </div>
+      <div>
+        <b>Navegación</b>
+        <ul style="list-style:none;padding:0;">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="reviews.html">Reseñas</a></li>
+          <li><a href="contact.html">Contactos</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Contáctanos</b>
+        <p>Av. Ladislao Cabrera, Ciudad de Cochabamba<br>+591 79749800<br>cipecplataforma368@gmail.com<br>Lun - Vie: 9:00 - 21:00</p>
+      </div>
+    <div class="container">
+      <p>&copy; 2025 Happy Fest. Todos los derechos reservados.</p>
+      <form class="search-bar" style="max-width:300px;margin:auto;">
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
+
