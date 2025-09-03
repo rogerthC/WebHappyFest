@@ -1,0 +1,97 @@
+<!-- Estructura base de la página de Reseñas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas - HappyFest</title>
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Reviews</div>
+      <ul class="nav-links">
+        <li><a href="../Home/home.html">Inicio</a></li>
+        <li><a href="../Services/services.html">Servicios</a></li>
+        <li><a href="../Catalog/catalog.html">Catálogo</a></li>
+        <li><a href="reviews.html" class="active">Reseñas</a></li>
+        <li><a href="../Contact/contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="breadcrumb">Eventos Elegantes</div>
+  </header>
+  <main>
+    <section class="testimonials-section">
+      <h1>Nuestros Clientes Hablan</h1>
+      <p class="section-desc">Testimonios reales de quienes han confiado en nosotros para hacer de su evento un momento inolvidable.</p>
+      <div class="testimonials-slider" id="testimonials-slider">
+        <!-- Testimonios destacados insertados por JS -->
+      </div>
+      <div class="slider-controls">
+        <button id="prev-testimonial">&#10094;</button>
+        <button id="next-testimonial">&#10095;</button>
+      </div>
+    </section>
+    <section class="experiences-section">
+      <h2>Experiencias de Nuestros Clientes</h2>
+      <div class="experiences-grid" id="experiences-grid">
+        <!-- Experiencias insertadas por JS -->
+      </div>
+    </section>
+    <section class="quotes-section">
+      <h2>Lo Que Dicen Nuestros Clientes</h2>
+      <div class="quotes-grid" id="quotes-grid">
+        <!-- Citas insertadas por JS -->
+      </div>
+    </section>
+    <section class="cta-section">
+      <h2>¿Listo para crear tu evento perfecto?</h2>
+      <p>Contáctanos y déjanos ayudarte a hacer realidad tu visión. ¡Tu evento ideal está a un clic de distancia!</p>
+      <a href="../Contact/contact.html" class="cta-btn">Contáctanos</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Agencia de Eventos</h3>
+        <p>Organizamos los mejores eventos públicos y privados. ¡Haz de tu momento algo inolvidable!</p>
+        <div class="footer-social">
+          <a href="#"><img src="../../assets/icons/img/logo.png" alt="Logo" height="24"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="../Home/home.html">Inicio</a></li>
+          <li><a href="../Catalog/catalog.html">Catálogo</a></li>
+          <li><a href="../Services/services.html">Servicios</a></li>
+          <li><a href="../Contact/contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Nuestros Servicios</h3>
+        <ul>
+          <li>Bodas</li>
+          <li>Corporativos</li>
+          <li>Cumpleaños</li>
+          <li>Aniversarios Especiales</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contáctanos</h3>
+        <p>Av. Principal, Ciudad de México</p>
+        <p>+52 1234 5678</p>
+        <p>info@happyfestmx.com</p>
+        <p>Lun-Vie: 9:00 - 19:30</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HappyFest. Todos los derechos reservados.</p>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Servicio</a>
+    </div>
+  </footer>
+  <script src="reviews.js"></script>
+</body>
+</html>

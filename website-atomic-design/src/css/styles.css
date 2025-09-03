@@ -66,6 +66,25 @@ header, footer {
   flex-direction: column;
   align-items: center;
 }
+/* Para los títulos de los servicios */
+.heading {
+    font-size: 3.5rem; /* Ajusta el tamaño del título principal */
+}
+
+/* Para los títulos de cada tarjeta de servicio */
+.card h3 {
+    font-size: 2rem; /* Ajusta el tamaño de los títulos de las tarjetas */
+}
+
+/* Para las descripciones de los servicios */
+.card p {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto de la descripción */
+}
+
+/* Para el texto del copyright en el footer */
+.footer-bottom p {
+    font-size: 1em; /* Ajusta el tamaño del texto del copyright */
+}
 
 /* Secciones de la landing */
 #services-cards, #catalog-cards, #reviews-cards {
@@ -129,4 +148,21 @@ footer {
   display: block;
   margin-bottom: 1em;
 }
+/* Estilos generales del footer */
+footer {
+    background-color: #f7e8e1; /* Color de fondo oscuro */
+    color: #111415; /* Color de texto claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    padding-top: 0; /* Ajustado para el mapa */
+    position: relative; /* Para el mapa */
+}
 
+.footer-map iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-placeholder {
+    padding: 2em;
+}

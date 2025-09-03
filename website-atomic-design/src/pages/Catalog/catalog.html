@@ -1,0 +1,124 @@
+<!-- Estructura base de la página de Catálogo -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - HAPPY FEST</title>
+  <link rel="stylesheet" href="../../atomo/Button.css">
+  <link rel="stylesheet" href="../../atomo/Title.css">
+  <link rel="stylesheet" href="../../molecules/ServiceCard.css">
+  <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Catalog</div>
+      <ul class="nav-links">
+        <li><a href="../Home/home.html">Inicio</a></li>
+        <li><a href="../Services/services.html">Servicios</a></li>
+        <li><a href="catalog.html" class="active">Catálogo</a></li>
+        <li><a href="../Reviews/reviews.html">Reseñas</a></li>
+        <li><a href="../Contact/contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="breadcrumb">Eventos Elegantes</div>
+  </header>
+  <main>
+    <section class="catalog-section">
+      <h1>Nuestro Catálogo de Eventos</h1>
+      <p class="catalog-desc">Elige el tipo de evento que deseas organizar y explora nuestras ideas y momentos inolvidables. ¡Haz tu evento único y especial con nuestro catálogo!</p>
+      <div class="filters">
+        <div class="categories">
+          <button class="category active" data-category="todos">Todos</button>
+          <button class="category" data-category="bodas">Bodas</button>
+          <button class="category" data-category="corporativos">Corporativos</button>
+          <button class="category" data-category="cumpleaños">Cumpleaños</button>
+          <button class="category" data-category="aniversarios">Aniversarios</button>
+        </div>
+        <div class="order">
+          <label for="order-select">Ordenar por:</label>
+          <select id="order-select">
+            <option value="recientes">Más recientes</option>
+            <option value="populares">Populares</option>
+          </select>
+        </div>
+      </div>
+      <div class="events-grid" id="events-grid">
+        <!-- Las tarjetas de eventos se insertan aquí por JS -->
+      </div>
+      <div class="pagination">
+        <button id="prev-page">Anterior</button>
+        <span id="page-info">1 / 2</span>
+        <button id="next-page">Siguiente</button>
+      </div>
+    </section>
+    <section class="cta-section">
+      <h2>¿Listo para crear tu evento soñado?</h2>
+      <p>Permanecemos atentos a ayudarte a hacer realidad tu evento. Nuestro equipo de expertos está listo para hacer tu idea realidad.</p>
+      <a href="../Contact/contact.html" class="cta-btn">Ver nuestros servicios</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Agencia de Eventos</h3>
+        <p>Organizamos los mejores eventos públicos y privados. ¡Haz de tu momento algo inolvidable!</p>
+        <div class="footer-social">
+          <a href="#"><img src="../../assets/icons/img/logo.png" alt="Logo" height="24"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="../Home/home.html">Inicio</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="../Services/services.html">Servicios</a></li>
+          <li><a href="../Contact/contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Nuestros Servicios</h3>
+        <ul>
+          <li>Bodas</li>
+          <li>Corporativos</li>
+          <li>Cumpleaños</li>
+          <li>Aniversarios Especiales</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contáctanos</h3>
+        <p>Av. Principal, Ciudad de México</p>
+        <p>+52 1234 5678</p>
+        <p>info@happyfestmx.com</p>
+        <p>Lun-Vie: 9:00 - 19:30</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HappyFest. Todos los derechos reservados.</p>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Servicio</a>
+    </div>
+  </footer>
+</footer>
+  <!-- Modal de detalles -->
+  <div id="modal-detalles" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h3 id="modal-title">Detalles del Evento</h3>
+      <div id="modal-precios">
+        <!-- Precios se insertan aquí -->
+      </div>
+    </div>
+  </div>
+  <script src="catalog.js"></script>
+</body>
+</html>
+  <main>
+    <!-- Secciones de catálogo aquí -->
+  </main>
+  <footer>
+    <p>&copy; 2025 HAPPY FEST. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
