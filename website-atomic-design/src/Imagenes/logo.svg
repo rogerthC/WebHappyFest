@@ -1,7 +1,0 @@
-<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="120" height="60" rx="12" fill="#e7c6b6"/>
-  <text x="60" y="35" text-anchor="middle" font-size="28" font-family="Arial Black, Arial, sans-serif" fill="#fff">Happy Fest</text>
-  <circle cx="20" cy="20" r="8" fill="#fff"/>
-  <circle cx="100" cy="40" r="6" fill="#fff"/>
-  <circle cx="60" cy="50" r="5" fill="#fff"/>
-</svg>
