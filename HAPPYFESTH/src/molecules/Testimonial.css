@@ -1,0 +1,27 @@
+/* Estilos para el testimonio */
+.testimonial {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(247,202,201,0.15);
+  padding: 18px;
+  margin: 12px 0;
+}
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+.testimonial-name {
+  font-size: 1.1rem;
+  color: #7a4e48;
+  margin-bottom: 6px;
+}
+.testimonial-text {
+  font-size: 1rem;
+  color: #7a4e48;
+  opacity: 0.85;
+}
