@@ -25,7 +25,11 @@
     <h1 class="contact-title">Contáctanos</h1>
     <p class="contact-desc">¿Tienes una pregunta, quieres cotizar o simplemente saludar? Llena el formulario o utiliza los datos de contacto. ¡Te responderemos muy rápido!</p>
     <div class="contact-container">
-      <form class="contact-form" id="contact-form" autocomplete="off">
+      <form class="contact-form" 
+            id="contact-form" 
+            action="https://formsubmit.co/soriaveizagalizbethyoselin@gmail.com" 
+            method="POST" 
+            autocomplete="off">
         <label for="nombre">Nombre Completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
         <label for="email">Correo Electrónico</label>
@@ -33,40 +37,59 @@
         <label for="asunto">Asunto</label>
         <input type="text" id="asunto" name="asunto" placeholder="Motivo de contacto" required>
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        <textarea id="mensaje" name="message" placeholder="Escribe tu mensaje..." required></textarea>
         <div class="form-check">
           <input type="checkbox" id="check" required>
           <label for="check">Acepto el aviso de privacidad y el uso de mis datos para ser contactado.</label>
         </div>
+        <!-- Redirección opcional -->
+        <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
         <button type="submit">Enviar Mensaje</button>
       </form>
       <div>
         <div class="contact-info">
           <h3>Información de Contacto</h3>
           <ul>
-            <li><span class="info-icon">📍</span>Av. Principal 123, Ciudad de México</li>
-            <li><span class="info-icon">📞</span>+52 1234 5678</li>
+            <li><span class="info-icon">📍</span>Av. Ladislao Cabrera N°328, Entre Esteban A. y 25 de Mayo, Cochabamba,Bolivia</li>
+            <li><span class="info-icon">📞</span>+591 79749800</li>
             <li><span class="info-icon">✉️</span>info@happyfestmx.com</li>
-            <li><span class="info-icon">⏰</span>Lun-Vie: 9:00 - 19:30</li>
+            <li><span class="info-icon">⏰</span>Lun-Vie: 8:00 - 21:30</li>
           </ul>
           <h4>Otras formas de contacto</h4>
           <ul>
-            <li>WhatsApp: +52 1234 5678</li>
+            <li>WhatsApp: +591 79749800</li>
             <li>Instagram: @happyfestmx</li>
           </ul>
         </div>
         <div class="social-section">
           <h4>Síguenos en Redes Sociales</h4>
           <div class="social-links">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Instagram</a>
+            <a href="https://www.facebook.com/CipecCochabamba/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="../../assets/icons/facebook.png" alt="Facebook" style="height:32px;vertical-align:middle;">
+            </a>
+            <a href="https://www.instagram.com/cipec_cochabamba/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="../../assets/icons/instagram.png" alt="Instagram" style="height:32px;vertical-align:middle;">
+            </a>
           </div>
         </div>
       </div>
     </div>
     <div class="map-section">
       <h3>Nuestra Ubicación</h3>
-      <iframe class="map-iframe" src="https://www.openstreetmap.org/export/embed.html?bbox=-99.1686%2C19.427%2C-99.133%2C19.44&amp;layer=mapnik" allowfullscreen="" loading="lazy"></iframe>
+      <iframe 
+        class="map-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d401.84275465435303!2d-66.15527509453612!3d-17.397285692942425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373f0c174bc77%3A0x629052a48a3c3bc0!2sCipec!5e0!3m2!1ses-419!2sbo!4v1756993453549!5m2!1ses-419!2sbo"
+        style="border: 1px solid #ccc; width: 100%; height: 400px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <br/>
+      <small>
+        <a href="https://www.google.com/maps/place/Cipec/@-17.3972857,-66.1552751,19z/data=!4m6!3m5!1s0x93e373f0c174bc77:0x629052a48a3c3bc0!8m2!3d-17.3972857!4d-66.1552751!16s%2Fg%2F11c4z1z7qg?entry=ttu" target="_blank">
+          Ver en Google Maps
+        </a>
+      </small>
     </div>
   </main>
   <footer class="footer">
