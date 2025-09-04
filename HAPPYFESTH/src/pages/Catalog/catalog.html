@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
+  <!-- 🔹 Navbar igual que en Servicios -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">Catalog</div>
+      <div class="logo">HAPPY FEST</div>
       <ul class="nav-links">
         <li><a href="../Home/home.html">Inicio</a></li>
         <li><a href="../Services/services.html">Servicios</a></li>
@@ -24,10 +25,12 @@
     </nav>
     <div class="breadcrumb">Eventos Elegantes</div>
   </header>
+
   <main>
     <section class="catalog-section">
       <h1>Nuestro Catálogo de Eventos</h1>
       <p class="catalog-desc">Elige el tipo de evento que deseas organizar y explora nuestras ideas y momentos inolvidables. ¡Haz tu evento único y especial con nuestro catálogo!</p>
+      
       <div class="filters">
         <div class="categories">
           <button class="category active" data-category="todos">Todos</button>
@@ -44,21 +47,25 @@
           </select>
         </div>
       </div>
+
       <div class="events-grid" id="events-grid">
         <!-- Las tarjetas de eventos se insertan aquí por JS -->
       </div>
+
       <div class="pagination">
         <button id="prev-page">Anterior</button>
         <span id="page-info">1 / 2</span>
         <button id="next-page">Siguiente</button>
       </div>
     </section>
+
     <section class="cta-section">
       <h2>¿Listo para crear tu evento soñado?</h2>
       <p>Permanecemos atentos a ayudarte a hacer realidad tu evento. Nuestro equipo de expertos está listo para hacer tu idea realidad.</p>
       <a href="../Contact/contact.html" class="cta-btn">Ver nuestros servicios</a>
     </section>
   </main>
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-col">
@@ -100,7 +107,7 @@
       <a href="#">Términos de Servicio</a>
     </div>
   </footer>
-</footer>
+
   <!-- Modal de detalles -->
   <div id="modal-detalles" class="modal">
     <div class="modal-content">
@@ -111,14 +118,7 @@
       </div>
     </div>
   </div>
+
   <script src="catalog.js"></script>
-</body>
-</html>
-  <main>
-    <!-- Secciones de catálogo aquí -->
-  </main>
-  <footer>
-    <p>&copy; 2025 HAPPY FEST. Todos los derechos reservados.</p>
-  </footer>
 </body>
 </html>

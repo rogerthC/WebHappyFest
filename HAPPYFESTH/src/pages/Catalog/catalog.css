@@ -38,22 +38,28 @@
     color: #444;
     margin-bottom: 8px;
 }
+
+/* Generales */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f7f7f9;
     margin: 0;
     color: #222;
 }
+
+/* Header y navbar (idéntico al de servicios) */
 .header {
     background: #fff;
     border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 8px;
 }
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 32px 0 32px;
+    padding: 16px 32px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .logo {
     font-size: 2rem;
@@ -77,11 +83,47 @@ body {
 .nav-links li a:hover {
     color: #b48e5c;
 }
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #b48e5c;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Estado activo del menú */
+.nav-active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    padding: 16px 0;
+    gap: 16px;
+}
+.nav-active li {
+    text-align: center;
+}
+
+/* Breadcrumb */
 .breadcrumb {
     font-size: 1rem;
     color: #b48e5c;
     margin: 8px 32px;
 }
+
+/* Sección catálogo */
 .catalog-section {
     max-width: 1200px;
     margin: 32px auto;
@@ -141,6 +183,8 @@ body {
     border: 1px solid #e5e5e5;
     font-size: 1rem;
 }
+
+/* Cards de eventos */
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -211,6 +255,8 @@ body {
 .event-actions a:hover {
     background: #a07a4a;
 }
+
+/* Paginación */
 .pagination {
     display: flex;
     justify-content: center;
@@ -237,6 +283,8 @@ body {
     font-size: 1rem;
     color: #b48e5c;
 }
+
+/* CTA */
 .cta-section {
     background: #f9e8d2;
     border-radius: 12px;
@@ -267,6 +315,8 @@ body {
 .cta-btn:hover {
     background: #a07a4a;
 }
+
+/* Footer */
 .footer {
     background: #222;
     color: #fff;
@@ -324,6 +374,8 @@ body {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+
+/* Responsive */
 @media (max-width: 900px) {
     .catalog-section {
         padding: 16px;
@@ -331,5 +383,21 @@ body {
     .footer-content {
         flex-direction: column;
         gap: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        padding: 16px 0;
+    }
+    .menu-toggle {
+        display: flex;
     }
 }
