@@ -4,21 +4,21 @@ const testimonials = [
     text: '"Eventos Elegantes hizo de nuestra boda un sueño hecho realidad. Cada detalle fue perfecto y nuestros invitados quedaron maravillados con la decoración y el servicio."',
     name: 'Carolina Mendoza',
     meta: 'Boda, Marzo 2023',
-    img: '../../assets/icons/img/inicio.png',
+  img: '../../assets/icons/img/testimonios/bodarecuerdo.jpeg',
     stars: 5
   },
   {
     text: '"Contratamos sus servicios para un evento corporativo y superaron nuestras expectativas. Profesionales, creativos y con una atención al cliente excepcional."',
     name: 'Ricardo Fuentes',
     meta: 'Evento Corporativo, Junio 2023',
-    img: '../../assets/icons/img/inicio.png',
+  img: '../../assets/icons/img/testimonios/corporativo.jpeg',
     stars: 5
   },
   {
     text: '"La fiesta de cumpleaños que organizaron para mi hijo fue mágica. Se encargaron de todo y pudimos disfrutar sin preocupaciones. ¡Volveremos a contratarlos!"',
     name: 'Alejandra Vega',
     meta: 'Cumpleaños, Mayo 2023',
-    img: '../../assets/icons/img/inicio.png',
+  img: '../../assets/icons/img/testimonios/aviversario.jpeg',
     stars: 5
   }
 ];
@@ -56,8 +56,10 @@ function startTestimonialSlider() {
 }
 // Imágenes temáticas para el hero (agrega más imágenes en assets/icons/img/ si lo deseas)
 const heroImages = [
-  '../../assets/icons/img/inicio.png',
-  '../../assets/icons/img/logo.png',
+  '../../assets/icons/img/testimonios/bodarecuerdo.jpeg',
+  '../../assets/icons/img/testimonios/aviversario.jpeg',
+  '../../assets/icons/img/testimonios/tematica.jpeg',
+  '../../assets/icons/img/testimonios/corporativo.jpeg',
   // Puedes agregar más imágenes aquí
 ];
 
