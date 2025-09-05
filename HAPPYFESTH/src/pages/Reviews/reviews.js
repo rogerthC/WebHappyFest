@@ -54,25 +54,25 @@ const experiencias = [
     {
         titulo: "Boda El Recuerdo",
         texto: "El equipo de HappyFest se encargó de todo. Fue un día inolvidable, la decoración y la organización fueron perfectas.",
-        imagen: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    imagen: "../../assets/icons/img/testimonios/bodarecuerdo.jpeg",
         estrellas: 5
     },
     {
         titulo: "Evento Corporativo Único",
         texto: "La logística y el ambiente profesional hicieron que nuestro evento fuera un éxito total.",
-        imagen: "https://images.unsplash.com/photo-1515168833906-d2a3b82b3027?auto=format&fit=crop&w=400&q=80",
+    imagen: "../../assets/icons/img/testimonios/corporativo.jpeg",
         estrellas: 5
     },
     {
         titulo: "Aniversario Memorable",
         texto: "Celebramos nuestro aniversario y todo salió mejor de lo esperado. ¡Gracias HappyFest!",
-        imagen: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+    imagen: "../../assets/icons/img/testimonios/aviversario.jpeg",
         estrellas: 5
     },
     {
         titulo: "Fiesta Temática Inolvidable",
         texto: "La creatividad y el entusiasmo del equipo hicieron que la fiesta fuera única.",
-        imagen: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80",
+    imagen: "../../assets/icons/img/testimonios/tematica.jpeg",
         estrellas: 5
     }
 ];

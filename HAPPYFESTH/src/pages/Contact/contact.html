@@ -8,28 +8,25 @@
   <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">Contact Page</div>
-      <ul class="nav-links">
-        <li><a href="../Home/home.html">Inicio</a></li>
-        <li><a href="../Services/services.html">Servicios</a></li>
-        <li><a href="../Catalog/catalog.html">Catálogo</a></li>
-        <li><a href="../Reviews/reviews.html">Reseñas</a></li>
-        <li><a href="contact.html" class="active">Contacto</a></li>
-      </ul>
+  <header>
+    <img src="../../assets/icons/img/logo.png" alt="Logo Happy Fest" class="logo" />
+    <nav>
+      <a href="../Home/home.html">Inicio</a>
+      <a href="../Services/services.html">Servicios</a>
+      <a href="../Catalog/catalog.html">Catálogo</a>
+      <a href="../Reviews/reviews.html">Reseñas</a>
+      <a href="contact.html" class="active">Contacto</a>
     </nav>
-    <div class="breadcrumb">Eventos Elegantes</div>
   </header>
   <main>
     <h1 class="contact-title">Contáctanos</h1>
     <p class="contact-desc">¿Tienes una pregunta, quieres cotizar o simplemente saludar? Llena el formulario o utiliza los datos de contacto. ¡Te responderemos muy rápido!</p>
     <div class="contact-container">
-      <form class="contact-form" 
-            id="contact-form" 
-            action="https://formsubmit.co/soriaveizagalizbethyoselin@gmail.com" 
-            method="POST" 
-            autocomplete="off">
+  <form class="contact-form" 
+    id="contact-form" 
+    action="https://formsubmit.co/marche.dev00@gmail.com" 
+    method="POST" 
+    autocomplete="off">
         <label for="nombre">Nombre Completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
         <label for="email">Correo Electrónico</label>
@@ -43,7 +40,8 @@
           <label for="check">Acepto el aviso de privacidad y el uso de mis datos para ser contactado.</label>
         </div>
         <!-- Redirección opcional -->
-        <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+  <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+  <input type="hidden" name="_captcha" value="false">
         <button type="submit">Enviar Mensaje</button>
       </form>
       <div>
@@ -92,47 +90,54 @@
       </small>
     </div>
   </main>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-col">
-        <h3>Agencia de Eventos</h3>
-        <p>Organizamos los mejores eventos públicos y privados. ¡Haz de tu momento algo inolvidable!</p>
-        <div class="footer-social">
-          <a href="#"><img src="../../assets/icons/img/logo.png" alt="Logo" height="24"></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Navegación</h3>
-        <ul>
-          <li><a href="../Home/home.html">Inicio</a></li>
-          <li><a href="../Catalog/catalog.html">Catálogo</a></li>
-          <li><a href="../Services/services.html">Servicios</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Nuestros Servicios</h3>
-        <ul>
-          <li>Bodas</li>
-          <li>Corporativos</li>
-          <li>Cumpleaños</li>
-          <li>Aniversarios Especiales</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Contáctanos</h3>
-        <p>Av. Principal, Ciudad de México</p>
-        <p>+52 1234 5678</p>
-        <p>info@happyfestmx.com</p>
-        <p>Lun-Vie: 9:00 - 19:30</p>
+  <div class="footer-main">
+    <div class="footer-col agency">
+      <img src="../../assets/icons/img/logo.png" alt="Logo" class="footer-logo" />
+      <h3>Agencia de Eventos</h3>
+      <p>Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Facebook" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Instagram" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Pinterest" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="WhatsApp" class="footer-social-icon" /></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 HappyFest. Todos los derechos reservados.</p>
-      <a href="#">Política de Privacidad</a>
-      <a href="#">Términos de Servicio</a>
+    <div class="footer-col nav">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="../Home/home.html">Inicio</a></li>
+        <li><a href="../Services/services.html">Servicios</a></li>
+        <li><a href="../Catalog/catalog.html">Catálogo</a></li>
+        <li><a href="../Reviews/reviews.html">Reseñas</a></li>
+        <li><a href="contact.html">Contactos</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-col services">
+      <h4>Nuestros Servicios</h4>
+      <ul>
+        <li>Bodas</li>
+        <li>Eventos Corporativos</li>
+        <li>Fiestas de Cumpleaños</li>
+        <li>Aniversarios</li>
+        <li>Eventos Especiales</li>
+      </ul>
+    </div>
+    <div class="footer-col contact">
+      <h4>Contáctanos</h4>
+      <p>Av. Principal 123, Ciudad de México</p>
+      <p>+52 55 1234 5678</p>
+      <p>info@agenciaeventos.com</p>
+      <p>Lun - Vie: 9:00 - 18:00</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Agencia de Eventos. Todos los derechos reservados.</span>
+    <div class="legal-links">
+      <a href="#" target="_blank">Términos y Condiciones</a>
+      <a href="#" target="_blank">Política de Privacidad</a>
+      <a href="#" target="_blank">Política de Cookies</a>
+    </div>
+  </div>
   <script src="contact.js"></script>
 </body>
 </html>
