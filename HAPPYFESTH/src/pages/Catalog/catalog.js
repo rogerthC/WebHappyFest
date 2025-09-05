@@ -2,74 +2,98 @@
 const eventos = [
     {
         id: 1,
-        titulo: "Boda Jardín Primaveral",
-        descripcion: "Organiza tu celebración al aire libre con la naturaleza como testigo. Decoración floral y ambiente romántico.",
-        imagen: "../../assets/icons/img/inicio.png",
-        categoria: "bodas",
-        tags: ["Hacienda Los Olivos"],
+        titulo: "Cumpleaños Infantiles/Juveniles",
+        descripcion: "Fiestas llenas de diversión, juegos y sorpresas para todas las edades. Hacemos de su día algo inolvidable.",
+        imagen: "../../assets/icons/img/catalog/cumpleaños.png", // CAMBIAR IMAGEN
+        categoria: "cumpleaños",
+        tags: ["Infantil", "Juvenil"],
         precios: [
-            { nombre: "Básico", precio: "$15,000 MXN" },
-            { nombre: "Premium", precio: "$25,000 MXN" }
+            { nombre: "Paquete Básico", precio: "Consultar" },
+            { nombre: "Paquete Premium", precio: "Consultar" }
         ]
     },
     {
         id: 2,
-        titulo: "Lanzamiento Tecnológico",
-        descripcion: "Presenta tu producto en un montaje profesional con tecnología de punta y networking.",
-        imagen: "../../assets/icons/img/inicio.png",
-        categoria: "corporativos",
-        tags: ["Centro Convenciones"],
+        titulo: "Bodas y Aniversarios",
+        descripcion: "Celebra el amor con una boda de ensueño o un aniversario memorable. Cuidamos cada detalle para que sea perfecto.",
+        imagen: "../../assets/icons/img/catalog/bodas.png", // CAMBIAR IMAGEN
+        categoria: "bodas",
+        tags: ["Boda", "Aniversario"],
         precios: [
-            { nombre: "Estándar", precio: "$18,000 MXN" }
+            { nombre: "Boda Íntima", precio: "Consultar" },
+            { nombre: "Gran Celebración", precio: "Consultar" }
         ]
     },
     {
         id: 3,
-        titulo: "Cumpleaños Safari",
-        descripcion: "Celebra el cumpleaños infantil con decoración de animales y actividades temáticas.",
-        imagen: "../../assets/icons/img/inicio.png",
-        categoria: "cumpleaños",
-        tags: ["Villa Encantada"],
+        titulo: "Bautizos y Primeras Comuniones",
+        descripcion: "Organizamos celebraciones familiares llenas de significado y alegría para un día tan especial y emotivo.",
+        imagen: "../../assets/icons/img/catalog/bautizo.png", // CAMBIAR IMAGEN
+        categoria: "aniversarios", // Usamos 'aniversarios' para otras celebraciones
+        tags: ["Familiar", "Religioso"],
         precios: [
-            { nombre: "Infantil", precio: "$8,000 MXN" }
+            { nombre: "Recepción", precio: "Consultar" }
         ]
     },
     {
         id: 4,
-        titulo: "Bodas de Plata",
-        descripcion: "Celebra tus 25 años de matrimonio con un evento elegante y emotivo.",
-        imagen: "../../assets/icons/img/inicio.png",
-        categoria: "aniversarios",
-        tags: ["Salón Imperial"],
+        titulo: "Graduaciones y Fiestas de Promoción",
+        descripcion: "Festeja el fin de una etapa y el comienzo de un nuevo futuro con una fiesta de graduación espectacular.",
+        imagen: "../../assets/icons/img/catalog/graduacion.png", // CAMBIAR IMAGEN
+        categoria: "corporativos", // Usamos 'corporativos' para eventos formales
+        tags: ["Graduación", "Promoción"],
         precios: [
-            { nombre: "Celebración", precio: "$12,000 MXN" }
+            { nombre: "Paquete Graduado", precio: "Consultar" }
         ]
     },
     {
         id: 5,
-        titulo: "Gala Benéfica Anual",
-        descripcion: "Evento de recaudación de fondos con ambiente sofisticado y servicio de catering premium.",
-        imagen: "../../assets/icons/img/inicio.png",
+        titulo: "Eventos Empresariales/Corporativos",
+        descripcion: "Desde conferencias hasta galas. Proyecta la mejor imagen de tu empresa con un evento profesional e impecable.",
+        imagen: "../../assets/icons/img/catalog/corporativo.png", // CAMBIAR IMAGEN
         categoria: "corporativos",
-        tags: ["Palacio de Bellas Artes"],
+        tags: ["Empresarial", "Networking"],
         precios: [
-            { nombre: "Gala", precio: "$30,000 MXN" }
+            { nombre: "Media Jornada", precio: "Consultar" },
+            { nombre: "Jornada Completa", precio: "Consultar" }
         ]
     },
     {
         id: 6,
-        titulo: "Boda Destino Playa",
-        descripcion: "Ceremonia frente al mar y fiesta inolvidable en la playa.",
-        imagen: "../../assets/icons/img/inicio.png",
-        categoria: "bodas",
-        tags: ["Playa del Carmen"],
+        titulo: "Baby Showers y Despedidas",
+        descripcion: "Celebra la llegada de un nuevo miembro a la familia o el fin de la soltería con una fiesta única y divertida.",
+        imagen: "../../assets/icons/img/catalog/babyshower.png", // CAMBIAR IMAGEN
+        categoria: "cumpleaños", // Usamos 'cumpleaños' para fiestas personales
+        tags: ["Baby Shower", "Despedida"],
         precios: [
-            { nombre: "Playa", precio: "$22,000 MXN" }
+            { nombre: "Paquete Celebración", precio: "Consultar" }
+        ]
+    },
+    {
+        id: 7,
+        titulo: "Fiestas Temáticas",
+        descripcion: "Halloween, Navidad, Año Nuevo... ¡La temática la pones tú! Nosotros creamos la atmósfera perfecta.",
+        imagen: "../../assets/icons/img/placeholder-tematica.jpg", // CAMBIAR IMAGEN
+        categoria: "cumpleaños",
+        tags: ["Halloween", "Navidad"],
+        precios: [
+            { nombre: "Fiesta Temática", precio: "Consultar" }
+        ]
+    },
+    {
+        id: 8,
+        titulo: "Reuniones Privadas y Cenas Familiares",
+        descripcion: "Organizamos encuentros íntimos y cenas especiales con un ambiente acogedor y menús personalizados.",
+        imagen: "../../assets/icons/img/placeholder-cena.jpg", // CAMBIAR IMAGEN
+        categoria: "aniversarios",
+        tags: ["Privado", "Cena"],
+        precios: [
+            { nombre: "Cena Privada", precio: "Consultar" }
         ]
     }
 ];
 
-const eventosPorPagina = 6;
+const eventosPorPagina = 8; // Ajustado para mostrar todos los eventos
 let paginaActual = 1;
 let categoriaActual = "todos";
 let ordenActual = "recientes";
@@ -90,7 +114,16 @@ function renderizarEventos() {
     const grid = document.getElementById("events-grid");
     grid.innerHTML = "";
     const filtrados = filtrarEventos();
+    
+    // Ocultar paginación si no es necesaria
+    const paginacion = document.querySelector('.pagination');
     const totalPaginas = Math.ceil(filtrados.length / eventosPorPagina);
+    if (totalPaginas <= 1) {
+        paginacion.style.display = 'none';
+    } else {
+        paginacion.style.display = 'flex';
+    }
+
     const inicio = (paginaActual - 1) * eventosPorPagina;
     const fin = inicio + eventosPorPagina;
     const eventosPagina = filtrados.slice(inicio, fin);
@@ -112,9 +145,9 @@ function renderizarEventos() {
         `;
         grid.appendChild(card);
     });
-    document.getElementById("page-info").textContent = `${paginaActual} / ${totalPaginas}`;
+    document.getElementById("page-info").textContent = `${paginaActual} / ${Math.max(1, totalPaginas)}`;
     document.getElementById("prev-page").disabled = paginaActual === 1;
-    document.getElementById("next-page").disabled = paginaActual === totalPaginas;
+    document.getElementById("next-page").disabled = paginaActual >= totalPaginas;
 
     // Asignar eventos a los botones "Ver detalles"
     document.querySelectorAll('.ver-detalles-btn').forEach(btn => {
