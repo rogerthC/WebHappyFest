@@ -1,0 +1,13 @@
+/* Estilos para el input principal */
+.input-main {
+  border: 1.5px solid #f7cac9;
+  border-radius: 20px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  outline: none;
+  transition: border 0.2s;
+}
+.input-main:focus {
+  border: 1.5px solid #7a4e48;
+}

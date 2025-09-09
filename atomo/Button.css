@@ -1,0 +1,17 @@
+/* Estilos para el botón principal */
+.btn-main {
+  background: linear-gradient(90deg, #f7cac9 0%, #ffe5d9 100%);
+  color: #7a4e48;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247,202,201,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-main:hover {
+  background: linear-gradient(90deg, #ffe5d9 0%, #f7cac9 100%);
+  transform: scale(1.05);
+}

@@ -1,0 +1,91 @@
+<!-- Estructura base de la página de Servicios -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - HAPPY FEST</title>
+  <link rel="stylesheet" href="../../atomo/Button.css">
+  <link rel="stylesheet" href="../../atomo/Title.css">
+  <link rel="stylesheet" href="../../molecules/ServiceCard.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+  <!-- Barra de navegación igual a la de servicios.html -->
+  <header>
+  <img src="../../assets/icons/img/logo.png" alt="Logo Happy Fest" class="logo" />
+    <nav>
+  <a href="../Home/home.html">Inicio</a>
+  <a href="../Services/services.html">Servicios</a>
+  <a href="../Catalog/catalog.html">Catálogo</a>
+  <a href="../Reviews/reviews.html">Reseñas</a>
+  <a href="../Contact/contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <h1 class="section-title">Nuestros Servicios</h1>
+      <p class="services-desc">Creamos experiencias completamente únicas para cada ocasión especial. Descubre nuestra amplia gama de servicios personalizados para hacer de tu evento un momento inolvidable.</p>
+      <div class="services-grid" id="services-grid">
+        <!-- Tarjetas de servicios generadas dinámicamente -->
+      </div>
+      <div class="cta-personalizado">
+        <h3>¿Necesitas un servicio personalizado?</h3>
+        <p>Cuéntanos sobre tu evento y crearemos una propuesta a medida de tus sueños, perfectamente adaptada a tu estilo y necesidades.</p>
+        <button class="btn-main" onclick="window.location.href='../Contact/contact.html'">Solicitar Cotización</button>
+      </div>
+    </section>
+  </main>
+</main>
+  <div class="footer-main">
+    <div class="footer-col agency">
+      <img src="../../assets/icons/img/logo.png" alt="Logo" class="footer-logo" />
+      <h3>Agencia de Eventos</h3>
+      <p>Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Facebook" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Instagram" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Pinterest" class="footer-social-icon" /></a>
+        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="WhatsApp" class="footer-social-icon" /></a>
+      </div>
+    </div>
+    <div class="footer-col nav">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="../Home/home.html">Inicio</a></li>
+        <li><a href="../Services/services.html">Servicios</a></li>
+        <li><a href="../Catalog/catalog.html">Catálogo</a></li>
+        <li><a href="../Reviews/reviews.html">Reseñas</a></li>
+        <li><a href="../Contact/contact.html">Contactos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col services">
+      <h4>Nuestros Servicios</h4>
+      <ul>
+        <li>Bodas</li>
+        <li>Eventos Corporativos</li>
+        <li>Fiestas de Cumpleaños</li>
+        <li>Aniversarios</li>
+        <li>Eventos Especiales</li>
+      </ul>
+    </div>
+    <div class="footer-col contact">
+      <h4>Contáctanos</h4>
+      <p>Av. Principal 123, Ciudad de México</p>
+      <p>+52 55 1234 5678</p>
+      <p>info@agenciaeventos.com</p>
+      <p>Lun - Vie: 9:00 - 18:00</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Agencia de Eventos. Todos los derechos reservados.</span>
+    <div class="legal-links">
+      <a href="#" target="_blank">Términos y Condiciones</a>
+      <a href="#" target="_blank">Política de Privacidad</a>
+      <a href="#" target="_blank">Política de Cookies</a>
+    </div>
+  </div>
+  <script src="services.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* Estilos para el título principal */
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #7a4e48;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #ffe5d9;
+}
