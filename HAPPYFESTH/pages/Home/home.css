@@ -1,0 +1,413 @@
+/* home.css */
+
+/* Variables y estilos generales */
+:root {
+    --primary-color: #efdfd9; /* fondo suave rosa beige */
+    --secondary-color: #fff6f5;
+    --accent-color: #9b6456; /* marron rosado para acentos */
+    --text-color: #2f2f2f;
+    --muted: #7a6b6b;
+    --background-color: #ffffff;
+    --font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    --font-family-title: 'Cormorant Garamond', serif;
+    --border-radius: 14px;
+    --transition: 0.34s cubic-bezier(.2,.9,.2,1);
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Sección Hero */
+.hero-section {
+    position: relative;
+    height: 78vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    text-align: center;
+}
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.5) saturate(0.9);
+    z-index: 0;
+    transition: background-image 0.8s ease-in-out, transform 8s linear;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.35) 60%);
+    z-index: 1;
+    pointer-events: none;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+    padding: 24px;
+    gap: 12px;
+}
+.main-title {
+    font-size: 3.6rem;
+    font-family: var(--font-family-title);
+    margin: 6px 0 6px 0;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+.hero-desc {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    max-width: 720px;
+    color: rgba(255,255,255,0.95);
+}
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* Botones principales (mejorados) */
+.btn-main, .btn-secondary {
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: none;
+    transition: transform 220ms var(--transition), box-shadow 220ms var(--transition), opacity 180ms ease;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+.btn-main {
+    background: linear-gradient(90deg, rgba(235,153,139,1) 0%, rgba(171,103,91,1) 100%);
+    color: #fff;
+}
+.btn-main:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+}
+.btn-secondary {
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.22);
+}
+
+/* Inputs y textarea - estilo más moderno */
+.input-main {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(100,85,85,0.12);
+    background: rgba(255,255,255,0.98);
+    transition: box-shadow 200ms ease, border-color 200ms ease, transform 180ms ease;
+    outline: none;
+    font-size: 0.95rem;
+}
+.input-main:focus, .input-main:active {
+    box-shadow: 0 8px 30px rgba(155,100,90,0.12);
+    border-color: rgba(155,100,90,0.28);
+    transform: translateY(-2px);
+}
+.contact-form textarea.input-main {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Mejora apariencia de inputs en layout (responsive) */
+.contact-form { display:flex; flex-wrap:wrap; gap:10px; }
+.contact-form .input-main { flex:1 1 240px; }
+.contact-form .input-main[type="text"], .contact-form .input-main[type="email"] { max-width: 360px; }
+
+/* Estilo de botones del slider (flechas) */
+.slider-btn {
+    background: #fff;
+    color: var(--accent-color);
+    border: 1px solid rgba(155,100,90,0.12);
+    width:42px; height:42px; display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.slider-btn:hover { transform: scale(1.05); box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
+
+/* Tarjetas de servicio y testimonio: bordes y espaciado */
+.service-card, .testimonial-card {
+    border-radius: 12px;
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,245,244,0.98));
+}
+
+/* Imagenes: bordes suaves y cover */
+.catalog-img, .hero-gallery .circle img, .testimonial-user-img {
+    border-radius: 10px;
+    display: block;
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Imagen de usuario testimonial circular */
+.testimonial-user-img {
+    width:56px; height:56px; border-radius:50%; object-fit:cover; margin-right:10px; border: 3px solid rgba(255,255,255,0.9);
+}
+
+/* Pequeños ajustes visuales */
+.section-title { letter-spacing: 0.02em; }
+.testimonial-text { color: var(--muted); line-height:1.6; }
+
+
+/* Galería del Hero */
+.hero-gallery {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.hero-gallery .circle {
+    position: absolute;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(12,12,12,0.18);
+    background: #fff;
+    transform-origin: center center;
+    transition: transform 0.6s var(--transition), opacity 0.6s var(--transition);
+    opacity: 0.95;
+}
+.hero-gallery .circle img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: transform 0.8s var(--transition);
+}
+.hero-gallery .circle-1 { left: 4%; top: 16%; animation: float 6s ease-in-out infinite; }
+.hero-gallery .circle-2 { right: 6%; top: 8%; width: 180px; height: 180px; animation: float 5s ease-in-out infinite .4s; }
+.hero-gallery .circle-3 { right: 18%; bottom: 6%; width: 160px; height: 160px; animation: float 7s ease-in-out infinite .8s; }
+.hero-gallery .circle:hover { transform: scale(1.07) translateY(-6px); }
+@keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-12px); } 100% { transform: translateY(0); } }
+
+/* Secciones principales */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin: 48px 0 24px 0;
+    text-align: center;
+    font-family: var(--font-family-title);
+}
+
+/* Layout: ancho máximo y centrado para todas las secciones */
+main > section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Hero content centering and spacing */
+.hero-content { max-width: 980px; padding: 40px 20px; }
+
+/* Services: grid más controlado */
+.services-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; align-items: start; }
+.service-card { text-align: left; }
+
+
+/* Sección de Servicios */
+.services-section {
+    background: var(--background-color);
+    padding: 60px 0;
+}
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Sección de Catálogo */
+.catalog-section {
+    background: var(--secondary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+.catalog-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+.catalog-img-container {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.catalog-img-container:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+.catalog-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.catalog-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 450px;
+}
+.catalog-text-content p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Sección de Testimonios */
+.testimonials-section {
+    background: var(--background-color);
+    padding: 60px 0;
+}
+.testimonials-desc {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+.testimonials-slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+.testimonials-slider {
+    display: flex;
+    gap: 24px;
+    overflow: hidden; /* ocultamos scroll nativo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Forzamos ancho consistente de cada tarjeta para centrar mejor */
+.testimonial-card { min-width: 360px; max-width: 380px; box-sizing: border-box; }
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid rgba(155,100,90,0.12);
+    border-radius: 50%;
+    width: 44px; height: 44px; display:flex; align-items:center; justify-content:center;
+    font-size: 1.15rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.prev-btn { left: -12px; }
+.next-btn { right: -12px; }
+.testimonial-card {
+    min-width: 300px;
+    flex-shrink: 0;
+}
+.testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+}
+.testimonial-user-img {
+    border: 3px solid var(--primary-color);
+}
+.testimonial-user-name {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Sección de Contacto */
+.contact-section {
+    background: var(--secondary-color);
+    padding: 60px 0;
+}
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Contact info card más estrecha y centrada */
+.contact-info-card { flex: 1 1 320px; max-width: 360px; }
+.contact-form { flex: 1 1 460px; max-width: 520px; }
+
+/* Ajuste del formulario en escritorio: inputs alineados en dos filas */
+.contact-form { display:flex; flex-wrap:wrap; gap:12px; align-items:flex-start; }
+.contact-form .input-main { flex: 1 1 48%; }
+.contact-form textarea.input-main { flex: 1 1 100%; }
+.contact-form button.btn-main { flex: 1 1 100%; max-width: 200px; margin-top: 6px; }
+
+/* Animaciones */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries Responsivas */
+@media (max-width: 900px) {
+    .services-list, .catalog-content, .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .hero-section { height: 50vh; min-height: 380px; }
+    .hero-gallery .circle { display: none; }
+    .main-title { font-size: 3rem; }
+    .hero-desc { font-size: 1.3rem; }
+    .testimonials-slider-container { padding: 0 20px; }
+    .prev-btn { left: 0px; }
+    .next-btn { right: 0px; }
+    .catalog-text-content { text-align: center; align-items: center; }
+
+    /* Servicios en una columna en móviles */
+    .services-list { grid-template-columns: 1fr; }
+
+    /* Contacto: inputs full width en móviles */
+    .contact-form .input-main { flex: 1 1 100%; }
+    .contact-form button.btn-main { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .main-title { font-size: 2.5rem; }
+    .hero-desc { font-size: 1.1rem; }
+    .hero-buttons { flex-direction: column; gap: 15px; }
+}
