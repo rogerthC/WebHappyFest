@@ -1,0 +1,57 @@
+/* Header styles - reusable (improved layout) */
+.site-header{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:1200;
+	background:#fff;
+	box-shadow:0 4px 18px rgba(0,0,0,0.06);
+	/* explicit reset to avoid page-level header{} rules overriding this component */
+	display: block !important;
+}
+.header-inner{
+	max-width:1200px;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns:120px 1fr 60px;
+	align-items:center;
+	gap:12px;
+	padding:14px 20px;
+}
+.brand{display:flex;align-items:center}
+.brand-logo{width:56px;height:auto}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:28px}
+.main-nav a{color:#b87f6d;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:6px;display:inline-block}
+.main-nav a:hover{background:#f7e7e4}
+.main-nav a.active{background:#f7e7e4}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;justify-self:end}
+.nav-toggle span{display:block;width:22px;height:2px;background:#b87f6d;margin:4px 0}
+
+/* ensure page content doesn't sit under fixed header */
+body{padding-top:78px}
+
+/* Responsive */
+@media(max-width:900px){
+	.header-inner{grid-template-columns:56px 1fr 56px}
+	.main-nav{position:absolute;left:0;right:0;top:64px;background:#fff;border-top:1px solid #f0e7e5;display:none;padding:12px}
+	.main-nav.open{display:block}
+	.main-nav ul{flex-direction:column;gap:12px;align-items:flex-start}
+	.nav-toggle{display:block}
+}
+
+/* High-specificity overrides to protect the component from page-level header/nav rules */
+.site-header nav,
+.site-header .main-nav {
+	position: static !important;
+	left: auto !important;
+	transform: none !important;
+	background: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+}
+.site-header .main-nav { display: block !important; }
+.site-header .main-nav ul { display:flex !important; flex-direction:row !important; justify-content:center !important; gap:28px !important; margin:0 !important; padding:0 !important; }
+.site-header .main-nav a { color:#b87f6d !important; }
+.site-header .nav-toggle { z-index: 1300; }
+

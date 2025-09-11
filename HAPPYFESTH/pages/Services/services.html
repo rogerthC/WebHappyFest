@@ -1,0 +1,38 @@
+<!-- Estructura base de la página de Servicios -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - HAPPY FEST</title>
+  <link rel="stylesheet" href="../../atomo/Button.css">
+  <link rel="stylesheet" href="../../atomo/Title.css">
+  <link rel="stylesheet" href="../../molecules/ServiceCard.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="../../Componenetes/Organismos/header/header.css">
+  <link rel="stylesheet" href="../../Componenetes/Organismos/footer/footer.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="services-hero">
+      <h1 class="section-title">Nuestros Servicios</h1>
+      <p class="services-desc">Creamos experiencias completamente únicas para cada ocasión especial. Descubre nuestra amplia gama de servicios personalizados para hacer de tu evento un momento inolvidable.</p>
+      <div class="services-grid" id="services-grid">
+        <!-- Tarjetas de servicios generadas dinámicamente -->
+      </div>
+      <div class="cta-personalizado">
+        <h3>¿Necesitas un servicio personalizado?</h3>
+        <p>Cuéntanos sobre tu evento y crearemos una propuesta a medida de tus sueños, perfectamente adaptada a tu estilo y necesidades.</p>
+        <button class="btn-main" onclick="window.location.href='../Contact/contact.html'">Solicitar Cotización</button>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+
+  <script src="../../Componenetes/Organismos/footer/footer.js"></script>
+  <script src="../../Componenetes/scripts/include-componenetes.js" defer></script>
+  <script src="services.js"></script>
+</body>
+</html>
