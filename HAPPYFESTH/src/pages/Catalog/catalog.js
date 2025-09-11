@@ -2,7 +2,7 @@
 const eventos = [
     {
         id: 1,
-        titulo: "Boda Jardín Primaveral",
+        titulo: "Cumpleaño infantiles y juveniles",
         descripcion: "Organiza tu celebración al aire libre con la naturaleza como testigo. Decoración floral y ambiente romántico.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "bodas",
@@ -14,7 +14,7 @@ const eventos = [
     },
     {
         id: 2,
-        titulo: "Lanzamiento Tecnológico",
+        titulo: "Bodas y Aniversarios",
         descripcion: "Presenta tu producto en un montaje profesional con tecnología de punta y networking.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "corporativos",
@@ -25,7 +25,7 @@ const eventos = [
     },
     {
         id: 3,
-        titulo: "Cumpleaños Safari",
+        titulo: "Bautizos y Primeras Comuniones",
         descripcion: "Celebra el cumpleaños infantil con decoración de animales y actividades temáticas.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "cumpleaños",
@@ -36,7 +36,7 @@ const eventos = [
     },
     {
         id: 4,
-        titulo: "Bodas de Plata",
+        titulo: "Graduaciones y Fiestas de Promocion",
         descripcion: "Celebra tus 25 años de matrimonio con un evento elegante y emotivo.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "aniversarios",
@@ -47,7 +47,7 @@ const eventos = [
     },
     {
         id: 5,
-        titulo: "Gala Benéfica Anual",
+        titulo: "Eventos Empresariales y Corporativos",
         descripcion: "Evento de recaudación de fondos con ambiente sofisticado y servicio de catering premium.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "corporativos",
@@ -58,13 +58,35 @@ const eventos = [
     },
     {
         id: 6,
-        titulo: "Boda Destino Playa",
+        titulo: "Baby Showers y Despedidas",
         descripcion: "Ceremonia frente al mar y fiesta inolvidable en la playa.",
         imagen: "../../assets/icons/img/inicio.png",
         categoria: "bodas",
         tags: ["Playa del Carmen"],
         precios: [
             { nombre: "Playa", precio: "$22,000 MXN" }
+        ]
+    },
+    {
+        id: 7,
+        titulo: "Fiestas Temáticas (Halloween, Año Nuevo, Navidad)",
+        descripcion: "Una celebración de ensueño para un momento inolvidable. Salón, banquete y música.",
+        imagen: "../../assets/icons/img/inicio.png",
+        categoria: "cumpleaños",
+        tags: ["Salón Esmeralda"],
+        precios: [
+            { nombre: "Paquete Quinceañera", precio: "$20,000 MXN" }
+        ]
+    },
+    {
+        id: 8,
+        titulo: "Reuniones Privadas y Cenas Familiares",
+        descripcion: "Sorprende a tu pareja con una cena privada bajo las estrellas, con chef personal.",
+        imagen: "../../assets/icons/img/inicio.png",
+        categoria: "aniversarios",
+        tags: ["Terraza Mirador"],
+        precios: [
+            { nombre: "Cena para dos", precio: "$5,000 MXN" }
         ]
     }
 ];

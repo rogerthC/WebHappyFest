@@ -1,0 +1,58 @@
+/* shared-components.css
+   Reglas para garantizar apariencia consistente de header y footer
+*/
+
+:root{
+  --site-accent: #b87f6d;
+  --site-accent-2: #b48a78;
+  --site-bg-soft: #fbf3f1;
+  --site-header-height: 78px;
+}
+
+/* Header => asegurar altura y espaciado coherente */
+.site-header{
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1200;
+}
+.site-header .header-inner{display:grid;grid-template-columns:120px 1fr 60px;align-items:center;gap:12px;max-width:1200px;margin:0 auto;padding:14px 20px}
+.site-header .brand-logo{width:56px;height:auto}
+.site-header .main-nav ul{display:flex;gap:28px;justify-content:center;align-items:center}
+.site-header .main-nav a{color:var(--site-accent);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:6px}
+.site-header .main-nav a:hover,.site-header .main-nav a.active{background:#f7e7e4}
+
+/* Footer => coherencia y espaciado */
+.site-footer{background:var(--site-bg-soft);color:#6b4b41;padding:48px 20px 24px 20px;font-family: 'Segoe UI', Roboto, sans-serif}
+.site-footer .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid #f2e6e4}
+.site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:18px;max-width:1200px;margin:18px auto 0}
+.site-footer .footer-logo{width:56px}
+
+/* Responsive helpers */
+@media(max-width:900px){
+  .site-header .header-inner{grid-template-columns:56px 1fr 56px}
+  .site-header .main-nav{position:absolute;left:0;right:0;top:64px;background:#fff;border-top:1px solid #f0e7e5;display:none;padding:12px}
+  .site-header .main-nav.open{display:block}
+  .site-header .main-nav ul{flex-direction:column;gap:12px;align-items:flex-start}
+  .site-footer .footer-inner{grid-template-columns:1fr;padding:20px}
+  .site-footer .footer-bottom{flex-direction:column;gap:12px}
+}
+
+/* Small tweaks for accessibility */
+.site-header a{outline-offset:3px}
+.site-footer a{outline-offset:3px}
+.site-header .main-nav { display: block; }
+
+/* Force consistent nav/button layout across pages that had page-level nav rules */
+.site-header .main-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:28px; justify-content:center; align-items:center; }
+.site-header .main-nav a, .site-header .nav-links a { color: var(--site-accent) !important; text-decoration: none !important; padding:8px 12px; border-radius:6px; }
+.site-header .main-nav a:hover, .site-header .main-nav a.active { background: #f7e7e4 !important; }
+
+/* Global button tokens to align CTA/button visuals across pages */
+.btn-main, .cta-btn { background: linear-gradient(90deg, rgba(235,153,139,1) 0%, rgba(171,103,91,1) 100%) !important; color: #fff !important; padding: 10px 22px !important; border-radius: 999px !important; border: none !important; font-weight:600 !important; box-shadow: 0 8px 22px rgba(0,0,0,0.12) !important; }
+.btn-main:hover, .cta-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.14) !important; }
+
+/* Ensure main content has consistent padding relative to header */
+main, .page, .container { padding-top: 0; }
+

@@ -6,18 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contáctanos - HappyFest</title>
   <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="../../Componenetes/Organismos/header/header.css">
+  <link rel="stylesheet" href="../../Componenetes/Organismos/footer/footer.css">
 </head>
 <body>
-  <header>
-    <img src="../../assets/icons/img/logo.png" alt="Logo Happy Fest" class="logo" />
-    <nav>
-      <a href="../Home/home.html">Inicio</a>
-      <a href="../Services/services.html">Servicios</a>
-      <a href="../Catalog/catalog.html">Catálogo</a>
-      <a href="../Reviews/reviews.html">Reseñas</a>
-      <a href="contact.html" class="active">Contacto</a>
-    </nav>
-  </header>
+  <div id="header"></div>
   <main>
     <h1 class="contact-title">Contáctanos</h1>
     <p class="contact-desc">¿Tienes una pregunta, quieres cotizar o simplemente saludar? Llena el formulario o utiliza los datos de contacto. ¡Te responderemos muy rápido!</p>
@@ -32,16 +25,19 @@
         <label for="email">Correo Electrónico</label>
         <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required>
         <label for="asunto">Asunto</label>
-        <input type="text" id="asunto" name="asunto" placeholder="Motivo de contacto" required>
+  <input type="text" id="asunto" name="asunto" placeholder="Motivo de contacto" required>
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="Contacto desde HappyFest - Nuevo mensaje">
+  <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" name="message" placeholder="Escribe tu mensaje..." required></textarea>
         <div class="form-check">
-          <input type="checkbox" id="check" required>
+      <input type="checkbox" id="check" name="consent" value="accepted" required>
           <label for="check">Acepto el aviso de privacidad y el uso de mis datos para ser contactado.</label>
         </div>
         <!-- Redirección opcional -->
-  <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
-  <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+    <input type="hidden" name="_captcha" value="false">
         <button type="submit">Enviar Mensaje</button>
       </form>
       <div>
@@ -90,54 +86,10 @@
       </small>
     </div>
   </main>
-  <div class="footer-main">
-    <div class="footer-col agency">
-      <img src="../../assets/icons/img/logo.png" alt="Logo" class="footer-logo" />
-      <h3>Agencia de Eventos</h3>
-      <p>Creamos momentos inolvidables para cada ocasión especial. Nuestra pasión es hacer realidad tus sueños.</p>
-      <div class="footer-social">
-        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Facebook" class="footer-social-icon" /></a>
-        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Instagram" class="footer-social-icon" /></a>
-        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="Pinterest" class="footer-social-icon" /></a>
-        <a href="#"><img src="../../assets/icons/img/inicio.png" alt="WhatsApp" class="footer-social-icon" /></a>
-      </div>
-    </div>
-    <div class="footer-col nav">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="../Home/home.html">Inicio</a></li>
-        <li><a href="../Services/services.html">Servicios</a></li>
-        <li><a href="../Catalog/catalog.html">Catálogo</a></li>
-        <li><a href="../Reviews/reviews.html">Reseñas</a></li>
-        <li><a href="contact.html">Contactos</a></li>
-      </ul>
-    </div>
-    <div class="footer-col services">
-      <h4>Nuestros Servicios</h4>
-      <ul>
-        <li>Bodas</li>
-        <li>Eventos Corporativos</li>
-        <li>Fiestas de Cumpleaños</li>
-        <li>Aniversarios</li>
-        <li>Eventos Especiales</li>
-      </ul>
-    </div>
-    <div class="footer-col contact">
-      <h4>Contáctanos</h4>
-      <p>Av. Principal 123, Ciudad de México</p>
-      <p>+52 55 1234 5678</p>
-      <p>info@agenciaeventos.com</p>
-      <p>Lun - Vie: 9:00 - 18:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2025 Agencia de Eventos. Todos los derechos reservados.</span>
-    <div class="legal-links">
-      <a href="#" target="_blank">Términos y Condiciones</a>
-      <a href="#" target="_blank">Política de Privacidad</a>
-      <a href="#" target="_blank">Política de Cookies</a>
-    </div>
-  </div>
+  <div id="footer"></div>
+
+  <script src="../../Componenetes/Organismos/footer/footer.js"></script>
+  <script src="../../Componenetes/scripts/include-componenetes.js" defer></script>
   <script src="contact.js"></script>
 </body>
 </html>

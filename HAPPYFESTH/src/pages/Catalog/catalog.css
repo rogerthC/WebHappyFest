@@ -47,69 +47,6 @@ body {
     color: #222;
 }
 
-/* Header y navbar (idéntico al de servicios) */
-.header {
-  display: flex;
-  align-items: center;
-  padding: 18px 6vw 12px 6vw;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(231,198,182,0.10);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  max-width: 100vw;
-  z-index: 100;
-}
-
-.header .logo {
-  height: 54px;
-  border-radius: 8px;
-  margin: 0;
-  background: url('../../assets/icons/img/logo.png') no-repeat center center;
-  background-size: contain;
-  width: 54px;
-  min-width: 54px;
-}
-
-.navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-links li {
-  margin: 0;
-}
-
-.nav-links a {
-  color: #b48a78;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-  padding: 8px 16px;
-  border-radius: 6px;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
-  color: #e7c6b6;
-  background: #f8f4f2;
-}
-
 /* Oculta breadcrumb */
 .breadcrumb {
   display: none;
@@ -303,6 +240,7 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     transition: background 0.2s;
+.page-footer-space{margin-top:48px}
 }
 .cta-btn:hover {
     background: #a07a4a;
@@ -386,32 +324,6 @@ body {
 }
 
 .footer-col ul li a:hover {
-  color: #b48a78;
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  border-top: 1px solid #e7c6b6;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 1rem;
-  color: #b48a78;
-  background: #f8f4f2;
-}
-
-.legal-links {
-  margin-top: 8px;
-}
-
-.legal-links a {
-  color: #8d5c43;
-  margin-left: 18px;
-  text-decoration: none;
-  font-size: 0.98rem;
-  transition: color 0.2s;
-}
-
-.legal-links a:hover {
   color: #b48a78;
   text-decoration: underline;
 }

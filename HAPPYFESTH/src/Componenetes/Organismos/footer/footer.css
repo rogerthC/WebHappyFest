@@ -1,0 +1,23 @@
+/* Footer styles - reusable */
+.site-footer{background:#fbf3f1;color:#6b4b41;padding:48px 20px 24px 20px;font-family: 'Segoe UI', Roboto, sans-serif}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid #f2e6e4}
+.footer-logo{width:56px}
+.footer-brand h3{color:#b87f6d;margin-top:12px;font-size:20px}
+.footer-brand p{max-width:340px;color:#3a2d2b;line-height:1.6}
+.footer-thumbs img{width:40px;height:40px;border-radius:50%;margin-right:8px;box-shadow:0 0 0 4px #fff}
+.footer-nav h4,.footer-services h4,.footer-contact h4{color:#b87f6d;margin-bottom:12px}
+.footer-nav ul,.footer-services ul{list-style:none;padding:0;margin:0}
+.footer-nav a{color:#8f5a4f;text-decoration:none}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:18px;max-width:1200px;margin:18px auto 0}
+.footer-legal{display:flex;gap:18px;align-items:center}
+.footer-legal a{color:#8f5a4f;text-decoration:underline;font-size:14px}
+
+/* support the "legal-links" class used in page-level CSS to style legal links */
+.legal-links{display:flex;gap:18px;align-items:center}
+.legal-links a{color:#8f5a4f;text-decoration:underline;font-size:14px}
+
+@media(max-width:900px){
+	.footer-inner{grid-template-columns:1fr;}
+	.footer-bottom{flex-direction:column;gap:12px}
+	.footer-legal{flex-wrap:wrap}
+}

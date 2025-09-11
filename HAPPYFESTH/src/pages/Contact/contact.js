@@ -8,6 +8,7 @@ const check = document.getElementById('check');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
+    // Validate fields
     let valido = true;
     [nombre, email, asunto, mensaje].forEach(input => {
         input.classList.remove('input-error');
@@ -23,40 +24,37 @@ form.addEventListener('submit', function(e) {
         check.classList.remove('input-error');
     }
     if (!valido) return;
-    // Enviar el formulario al endpoint definido en el atributo action (FormSubmit) usando fetch
+
     const submitButton = form.querySelector('button');
-    submitButton.textContent = 'Enviando...';
+    if(submitButton) submitButton.textContent = 'Enviando...';
 
-    const url = form.action;
-    const formData = new FormData(form);
+    // Try local server first
+    const payload = {
+        nombre: nombre.value,
+        email: email.value,
+        asunto: asunto.value,
+        message: mensaje.value,
+        consent: check.checked ? 'accepted' : 'no'
+    };
 
-    fetch(url, {
+    fetch('http://localhost:3333/send-contact', {
         method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(async response => {
-        if (response.ok) {
-            // Mostrar mensaje de éxito y resetear
-            submitButton.textContent = 'Enviado ✓';
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    }).then(r=> r.json()).then(data=>{
+        if(data && data.ok){
+            if(submitButton) submitButton.textContent = 'Enviado ✓';
             form.reset();
-        } else {
-            const text = await response.text();
-            console.error('Form submit failed:', text);
-            submitButton.textContent = 'Error al enviar';
-            // fallback: abrir mailto con los datos
-            const mailto = `mailto:marche.dev00@gmail.com?subject=${encodeURIComponent(asunto.value)}&body=${encodeURIComponent('Nombre: '+nombre.value+'\nEmail: '+email.value+'\n\n'+mensaje.value)}`;
-            window.open(mailto, '_blank');
+            return;
         }
+        // fallback: submit natively to FormSubmit
+        form.submit();
     }).catch(err => {
-        console.error('Network or CORS error:', err);
-        submitButton.textContent = 'Error de red';
-        // fallback a mailto
-        const mailto = `mailto:marche.dev00@gmail.com?subject=${encodeURIComponent(asunto.value)}&body=${encodeURIComponent('Nombre: '+nombre.value+'\nEmail: '+email.value+'\n\n'+mensaje.value)}`;
-        window.open(mailto, '_blank');
-    }).finally(() => {
-        setTimeout(() => submitButton.textContent = 'Enviar Mensaje', 2500);
+        console.warn('Local email server failed:', err);
+        // fallback: submit natively to FormSubmit
+        form.submit();
+    }).finally(()=>{
+        setTimeout(()=>{ if(submitButton) submitButton.textContent = 'Enviar Mensaje'; }, 2500);
     });
 });
 

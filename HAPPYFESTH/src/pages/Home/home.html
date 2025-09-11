@@ -1,113 +1,121 @@
-<!-- Estructura base de la Landing Page -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAPPY FEST - Happy Fest </title>
-  <link rel="stylesheet" href="../../atomo/Button.css">
-  <link rel="stylesheet" href="../../atomo/Title.css">
-  <link rel="stylesheet" href="../../atomo/Input.css">
-  <link rel="stylesheet" href="../../molecules/ServiceCard.css">
-  <link rel="stylesheet" href="../../molecules/Testimonial.css">
-  <link rel="stylesheet" href="../../molecules/ContactCard.css">
-  <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Fest - Creamos momentos inolvidables</title>
+    <meta name="description" content="Happy Fest organiza eventos inolvidables para bodas, celebraciones y eventos corporativos en Cochabamba, Bolivia.">
+    <meta name="keywords" content="eventos, fiestas, bodas, corporativos, cumpleaños, Happy Fest, Cochabamba">
+    <meta property="og:title" content="Happy Fest - Creamos momentos inolvidables">
+    <meta property="og:description" content="Organización y ambientación de eventos con alegría y color en Cochabamba.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../Componenetes/Organismos/header/header.css">
+    <link rel="stylesheet" href="../../Componenetes/Organismos/footer/footer.css">
+    <link rel="stylesheet" href="../../atomo/Button.css">
+    <link rel="stylesheet" href="../../atomo/Title.css">
+    <link rel="stylesheet" href="../../atomo/Input.css">
+    <link rel="stylesheet" href="../../molecules/ServiceCard.css">
+    <link rel="stylesheet" href="../../molecules/Testimonial.css">
+    <link rel="stylesheet" href="../../molecules/ContactCard.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <header>
-    <img src="../../assets/icons/img/logo.png" alt="Logo Happy Fest" class="logo" />
-    <nav>
-      <a href="../Home/home.html">Inicio</a>
-      <a href="../Services/services.html">Servicios</a>
-      <a href="../Catalog/catalog.html">Catálogo</a>
-      <a href="../Reviews/reviews.html">Reseñas</a>
-      <a href="../Contact/contact.html">Contacto</a>
-    </nav>
-  </header>
-  <main>
-    <!-- Hero principal -->
-    <section class="hero">
-      <div class="hero-bg" id="hero-bg"></div>
-      <div class="hero-content">
-        <h1 class="main-title">Happy Fest</h1>
-        <p class="hero-desc">Creamos momentos inolvidables con alegría y color</p>
-        <div class="hero-buttons">
-          <button class="btn-main" onclick="window.location.href='../Services/services.html'">Ver Servicios</button>
-          <button class="btn-main" onclick="window.location.href='../Catalog/catalog.html'">Ver Catálogo</button>
-        </div>
-      </div>
-    </section>
+    <div id="header"></div>
+    
+    <main>
+        <section class="hero-section">
+                <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+                <div class="hero-overlay" aria-hidden="true"></div>
+                <div class="hero-gallery" aria-hidden="true">
+                    <div class="circle circle-1"><img src="../../assets/icons/img/boda/boda1.png" alt=""/></div>
+                    <div class="circle circle-2"><img src="../../assets/icons/img/aniversario/aniversario1.png" alt=""/></div>
+                    <div class="circle circle-3"><img src="../../assets/icons/img/cumpleaños/cumpleaños1.png" alt=""/></div>
+                </div>
 
-    <!-- Sección de servicios destacados -->
-    <section class="services-section">
-      <h2 class="section-title">Creamos Experiencias Memorables</h2>
-      <div class="services-list">
-        <div class="service-card">
-          <img src="../../assets/icons/img/testimonios/bodarecuerdo.jpeg" alt="Bodas" class="service-img" />
-          <h3 class="service-title">Bodas</h3>
-          <p class="service-desc">Organización y ambientación de bodas inolvidables.</p>
-        </div>
-        <div class="service-card">
-          <img src="../../assets/icons/img/corporativo/corporativo2.png" alt="Corporativos" class="service-img" />
-          <h3 class="service-title">Eventos Corporativos</h3>
-          <p class="service-desc">Eventos empresariales con elegancia y profesionalismo.</p>
-        </div>
-        <div class="service-card">
-          <img src="../../assets/icons/img/testimonios/tematica.jpeg" alt="Celebraciones" class="service-img" />
-          <h3 class="service-title">Celebraciones</h3>
-          <p class="service-desc">Cumpleaños, aniversarios y fiestas temáticas.</p>
-        </div>
-      </div>
-    </section>
+                <div class="hero-content">
+                    <p class="hero-subtitle">Eventos Elegantes</p>
+                    <h1 class="main-title">Creamos experiencias memorables</h1>
+                    <p class="hero-desc">Diseñamos y producimos eventos únicos: bodas, aniversarios, fiestas temáticas y eventos corporativos con atención a cada detalle.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-main" onclick="window.location.href='../Services/services.html'">Ver Servicios</button>
+                        <button class="btn-secondary" onclick="window.location.href='../Contact/contact.html'">Contáctanos</button>
+                    </div>
+                </div>
+        </section>
 
-    <!-- Sección de catálogo -->
-    <section class="catalog-section">
-      <h2 class="section-title">Nuestro Catálogo</h2>
-      <div class="catalog-content">
-        <img src="../../assets/icons/img/boda/album.jpeg" alt="Catálogo" class="catalog-img" />
-        <div>
-          <p>Descubre nuestra galería de eventos y decoraciones personalizadas.</p>
-          <button class="btn-main" onclick="window.location.href='../Catalog/catalog.html'">Ver Catálogo</button>
-        </div>
-      </div>
-    </section>
+        <section class="services-section reveal-on-scroll">
+            <h2 class="section-title">Creamos Experiencias Memorables</h2>
+            <div class="services-list">
+                <div class="service-card reveal-on-scroll">
+                    <i class="fa-solid fa-ring service-icon"></i> <h3 class="service-title">Bodas</h3>
+                    <p class="service-desc">Organización y ambientación de bodas inolvidables.</p>
+                </div>
+                <div class="service-card reveal-on-scroll">
+                    <i class="fa-solid fa-briefcase service-icon"></i> <h3 class="service-title">Eventos Corporativos</h3>
+                    <p class="service-desc">Eventos empresariales con elegancia y profesionalismo.</p>
+                </div>
+                <div class="service-card reveal-on-scroll">
+                    <i class="fa-solid fa-champagne-glasses service-icon"></i> <h3 class="service-title">Celebraciones</h3>
+                    <p class="service-desc">Cumpleaños, aniversarios y fiestas temáticas.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección de testimonios -->
-    <section class="testimonials-section">
-      <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-      <p class="testimonials-desc">Descubre por qué somos la opción preferida para organizar eventos inolvidables.</p>
-      <div class="testimonials-slider" id="testimonials-slider">
-        <!-- Los testimonios se insertan dinámicamente -->
-      </div>
-    </section>
+        <section class="catalog-section reveal-on-scroll">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+            <div class="catalog-content">
+                <div class="catalog-img-container">
+                    <img src="../../assets/icons/img/boda/album.jpeg" alt="Catálogo de eventos" class="catalog-img" loading="lazy" />
+                </div>
+                <div class="catalog-text-content">
+                    <p>Descubre nuestra galería de eventos y decoraciones personalizadas, pensadas para cada ocasión especial.</p>
+                    <button class="btn-main" onclick="window.location.href='../Catalog/catalog.html'">Ver Catálogo</button>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección de contacto -->
-    <section class="contact-section">
-      <h2 class="section-title">Contáctanos</h2>
-      <div class="contact-content">
-        <div class="contact-card">
-          <h3 class="contact-title">Información de Contacto</h3>
-          <p class="contact-info">Tel: 555-123-4567<br>Email: info@happyfest.com</p>
-        </div>
-        <form class="contact-form" id="contact-form">
-          <input class="input-main" type="text" name="nombre" placeholder="Nombre" required />
-          <input class="input-main" type="email" name="email" placeholder="Correo electrónico" required />
-          <input class="input-main" type="text" name="telefono" placeholder="Teléfono" />
-          <textarea class="input-main" name="mensaje" placeholder="Mensaje" required></textarea>
-          <button class="btn-main" type="submit">Enviar Mensaje</button>
-        </form>
-      </div>
-    </section>
-  </main>
-  </main>
-  <footer>
-    <p>&copy; 2025 HAPPY FEST. Todos los derechos reservados.</p>
-  </footer>
-  <div class="legal-links">
-    <a href="#" target="_blank">Términos y Condiciones</a>
-    <a href="#" target="_blank">Política de Privacidad</a>
-    <a href="#" target="_blank">Política de Cookies</a>
-  </div>
+        <section class="testimonials-section reveal-on-scroll">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="testimonials-desc">Historias reales de clientes satisfechos que confiaron en Happy Fest.</p>
+            <div class="testimonials-slider-container">
+                <div class="testimonials-slider" id="testimonials-slider"></div>
+                <button class="slider-btn prev-btn" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" aria-label="Siguiente testimonio"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="contact-section reveal-on-scroll">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info-card reveal-on-scroll">
+                    <h3 class="contact-title">Información de Contacto</h3>
+                    <p class="contact-info">
+                        <strong>Tel:</strong> +591 555-123-4567<br>
+                        <strong>Email:</strong> info@happyfest.com<br>
+                        <strong>Dirección:</strong> Cochabamba, Bolivia
+                    </p>
+                </div>
+                <form class="contact-form reveal-on-scroll" id="contact-form">
+                    <input class="input-main" type="text" name="nombre" placeholder="Nombre" required />
+                    <input class="input-main" type="email" name="email" placeholder="Correo electrónico" required />
+                    <input class="input-main" type="text" name="telefono" placeholder="Teléfono (opcional)" />
+                    <textarea class="input-main" name="mensaje" placeholder="Tu mensaje..." required></textarea>
+                    <button class="btn-main" type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../Componenetes/Organismos/footer/footer.js" defer></script>
+    <script src="../../Componenetes/scripts/include-componenetes.js" defer></script>
+    <script src="home.js" defer></script>
 </body>
-<script src="home.js"></script>
 </html>
